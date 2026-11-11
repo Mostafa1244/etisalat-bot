@@ -1,73 +1,73 @@
-﻿2026-11-11T05:35:05.4724044Z ##[group]Run actions/checkout@v4
-2026-11-11T05:35:05.4725203Z with:
-2026-11-11T05:35:05.4725678Z   repository: Mostafa1244/etisalat-bot
-2026-11-11T05:35:05.4729832Z   token: ***
-2026-11-11T05:35:05.4730486Z   ssh-strict: true
-2026-11-11T05:35:05.4730929Z   ssh-user: git
-2026-11-11T05:35:05.4731454Z   persist-credentials: true
-2026-11-11T05:35:05.4731932Z   clean: true
-2026-11-11T05:35:05.4732368Z   sparse-checkout-cone-mode: true
-2026-11-11T05:35:05.4733213Z   fetch-depth: 1
-2026-11-11T05:35:05.4733652Z   fetch-tags: false
-2026-11-11T05:35:05.4734089Z   show-progress: true
-2026-11-11T05:35:05.4734523Z   lfs: false
-2026-11-11T05:35:05.4734930Z   submodules: false
-2026-11-11T05:35:05.4735472Z   set-safe-directory: true
-2026-11-11T05:35:05.4735991Z   allow-unsafe-pr-checkout: false
-2026-11-11T05:35:05.4737055Z ##[endgroup]
-2026-11-11T05:35:05.8771015Z Syncing repository: Mostafa1244/etisalat-bot
-2026-11-11T05:35:05.8774877Z ##[group]Getting Git version info
-2026-11-11T05:35:05.8776345Z Working directory is '/home/runner/work/etisalat-bot/etisalat-bot'
-2026-11-11T05:35:05.8778461Z [command]/usr/bin/git version
-2026-11-11T05:35:05.8805376Z git version 2.56.0
-2026-11-11T05:35:05.8828549Z ##[endgroup]
-2026-11-11T05:35:05.8852489Z Temporarily overriding HOME='/home/runner/work/_temp/b5770022-96d0-4903-89c9-7cfc7c2be96f' before making global git config changes
-2026-11-11T05:35:05.8855583Z Adding repository directory to the temporary git global config as a safe directory
-2026-11-11T05:35:05.8859469Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etisalat-bot/etisalat-bot
-2026-11-11T05:35:05.8943956Z Deleting the contents of '/home/runner/work/etisalat-bot/etisalat-bot'
-2026-11-11T05:35:05.8947704Z ##[group]Initializing the repository
-2026-11-11T05:35:05.8953104Z [command]/usr/bin/git init /home/runner/work/etisalat-bot/etisalat-bot
-2026-11-11T05:35:05.9090925Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-11-11T05:35:05.9093901Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-11-11T05:35:05.9096319Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-11-11T05:35:05.9098222Z hint: call:
-2026-11-11T05:35:05.9099319Z hint:
-2026-11-11T05:35:05.9100541Z hint: 	git config --global init.defaultBranch <name>
-2026-11-11T05:35:05.9102130Z hint:
-2026-11-11T05:35:05.9103765Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-11-11T05:35:05.9106005Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-11-11T05:35:05.9107922Z hint:
-2026-11-11T05:35:05.9109088Z hint: 	git branch -m <name>
-2026-11-11T05:35:05.9110262Z hint:
-2026-11-11T05:35:05.9111751Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-11-11T05:35:05.9114930Z Initialized empty Git repository in /home/runner/work/etisalat-bot/etisalat-bot/.git/
-2026-11-11T05:35:05.9123680Z [command]/usr/bin/git remote add origin https://github.com/Mostafa1244/etisalat-bot
-2026-11-11T05:35:05.9246619Z ##[endgroup]
-2026-11-11T05:35:05.9247564Z ##[group]Disabling automatic garbage collection
-2026-11-11T05:35:05.9253957Z [command]/usr/bin/git config --local gc.auto 0
-2026-11-11T05:35:05.9295189Z ##[endgroup]
-2026-11-11T05:35:05.9296534Z ##[group]Setting up auth
-2026-11-11T05:35:05.9303677Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-11-11T05:35:05.9349416Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-11-11T05:35:05.9915121Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-11-11T05:35:05.9953849Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-11-11T05:35:06.0249337Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-11-11T05:35:06.0289159Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-11-11T05:35:06.0583547Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-11-11T05:35:06.0628732Z ##[endgroup]
-2026-11-11T05:35:06.0629758Z ##[group]Fetching the repository
-2026-11-11T05:35:06.0639200Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d197f68e83e048bd964d410ab197011656f19b1e:refs/remotes/origin/main
-2026-11-11T05:35:06.2779312Z From https://github.com/Mostafa1244/etisalat-bot
-2026-11-11T05:35:06.2781717Z  * [new ref]         d197f68e83e048bd964d410ab197011656f19b1e -> origin/main
-2026-11-11T05:35:06.2787095Z ##[endgroup]
-2026-11-11T05:35:06.2789306Z ##[group]Determining the checkout info
-2026-11-11T05:35:06.2791750Z ##[endgroup]
-2026-11-11T05:35:06.2796948Z [command]/usr/bin/git sparse-checkout disable
-2026-11-11T05:35:06.2858436Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-11-11T05:35:06.2896342Z ##[group]Checking out the ref
-2026-11-11T05:35:06.2901793Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-11-11T05:35:06.2991884Z Switched to a new branch 'main'
-2026-11-11T05:35:06.2997257Z branch 'main' set up to track 'origin/main'.
-2026-11-11T05:35:06.3006398Z ##[endgroup]
-2026-11-11T05:35:06.3057336Z [command]/usr/bin/git log -1 --format=%H
-2026-11-11T05:35:06.3087121Z d197f68e83e048bd964d410ab197011656f19b1e
+﻿2026-11-11T05:51:28.2340501Z ##[group]Run actions/checkout@v4
+2026-11-11T05:51:28.2341646Z with:
+2026-11-11T05:51:28.2342117Z   repository: Mostafa1244/etisalat-bot
+2026-11-11T05:51:28.2346096Z   token: ***
+2026-11-11T05:51:28.2346530Z   ssh-strict: true
+2026-11-11T05:51:28.2346973Z   ssh-user: git
+2026-11-11T05:51:28.2347419Z   persist-credentials: true
+2026-11-11T05:51:28.2347904Z   clean: true
+2026-11-11T05:51:28.2348344Z   sparse-checkout-cone-mode: true
+2026-11-11T05:51:28.2348866Z   fetch-depth: 1
+2026-11-11T05:51:28.2349294Z   fetch-tags: false
+2026-11-11T05:51:28.2349743Z   show-progress: true
+2026-11-11T05:51:28.2350187Z   lfs: false
+2026-11-11T05:51:28.2350600Z   submodules: false
+2026-11-11T05:51:28.2351050Z   set-safe-directory: true
+2026-11-11T05:51:28.2351696Z   allow-unsafe-pr-checkout: false
+2026-11-11T05:51:28.2352483Z ##[endgroup]
+2026-11-11T05:51:28.4742702Z Syncing repository: Mostafa1244/etisalat-bot
+2026-11-11T05:51:28.4745761Z ##[group]Getting Git version info
+2026-11-11T05:51:28.4747114Z Working directory is '/home/runner/work/etisalat-bot/etisalat-bot'
+2026-11-11T05:51:28.4755477Z [command]/usr/bin/git version
+2026-11-11T05:51:28.4874054Z git version 2.56.0
+2026-11-11T05:51:28.4903750Z ##[endgroup]
+2026-11-11T05:51:28.4955617Z Temporarily overriding HOME='/home/runner/work/_temp/ad4e87c9-3af0-43ff-9a26-6396d82de60d' before making global git config changes
+2026-11-11T05:51:28.4963188Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-11T05:51:28.4972906Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etisalat-bot/etisalat-bot
+2026-11-11T05:51:28.5019345Z Deleting the contents of '/home/runner/work/etisalat-bot/etisalat-bot'
+2026-11-11T05:51:28.5024828Z ##[group]Initializing the repository
+2026-11-11T05:51:28.5030880Z [command]/usr/bin/git init /home/runner/work/etisalat-bot/etisalat-bot
+2026-11-11T05:51:28.5153167Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-11T05:51:28.5154533Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-11T05:51:28.5155586Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-11T05:51:28.5156390Z hint: call:
+2026-11-11T05:51:28.5156811Z hint:
+2026-11-11T05:51:28.5157358Z hint: 	git config --global init.defaultBranch <name>
+2026-11-11T05:51:28.5158011Z hint:
+2026-11-11T05:51:28.5158620Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-11T05:51:28.5159692Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-11T05:51:28.5160539Z hint:
+2026-11-11T05:51:28.5173470Z hint: 	git branch -m <name>
+2026-11-11T05:51:28.5175049Z hint:
+2026-11-11T05:51:28.5176244Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-11T05:51:28.5177985Z Initialized empty Git repository in /home/runner/work/etisalat-bot/etisalat-bot/.git/
+2026-11-11T05:51:28.5180350Z [command]/usr/bin/git remote add origin https://github.com/Mostafa1244/etisalat-bot
+2026-11-11T05:51:28.5267779Z ##[endgroup]
+2026-11-11T05:51:28.5269620Z ##[group]Disabling automatic garbage collection
+2026-11-11T05:51:28.5271466Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-11T05:51:28.5322734Z ##[endgroup]
+2026-11-11T05:51:28.5323775Z ##[group]Setting up auth
+2026-11-11T05:51:28.5324538Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-11T05:51:28.5392898Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-11T05:51:28.5824466Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-11T05:51:28.5866002Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-11T05:51:28.6134313Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-11T05:51:28.6179342Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-11T05:51:28.6456733Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-11T05:51:28.6506768Z ##[endgroup]
+2026-11-11T05:51:28.6507660Z ##[group]Fetching the repository
+2026-11-11T05:51:28.6516838Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a972b6158a327943a1a199610ad4adcaf246928f:refs/remotes/origin/main
+2026-11-11T05:51:29.3684740Z From https://github.com/Mostafa1244/etisalat-bot
+2026-11-11T05:51:29.3686686Z  * [new ref]         a972b6158a327943a1a199610ad4adcaf246928f -> origin/main
+2026-11-11T05:51:29.3689747Z ##[endgroup]
+2026-11-11T05:51:29.3690910Z ##[group]Determining the checkout info
+2026-11-11T05:51:29.3692581Z ##[endgroup]
+2026-11-11T05:51:29.3699744Z [command]/usr/bin/git sparse-checkout disable
+2026-11-11T05:51:29.3756325Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-11T05:51:29.3796166Z ##[group]Checking out the ref
+2026-11-11T05:51:29.3801595Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-11T05:51:29.4539072Z Switched to a new branch 'main'
+2026-11-11T05:51:29.4542013Z branch 'main' set up to track 'origin/main'.
+2026-11-11T05:51:29.4554328Z ##[endgroup]
+2026-11-11T05:51:29.4601765Z [command]/usr/bin/git log -1 --format=%H
+2026-11-11T05:51:29.4634163Z a972b6158a327943a1a199610ad4adcaf246928f

@@ -1,0 +1,27 @@
+﻿2026-11-11T05:52:02.0654941Z ##[group]Run mkdir -p $HOME/android-sdk/cmdline-tools
+2026-11-11T05:52:02.0655405Z [36;1mmkdir -p $HOME/android-sdk/cmdline-tools[0m
+2026-11-11T05:52:02.0655738Z [36;1mcd $HOME/android-sdk/cmdline-tools[0m
+2026-11-11T05:52:02.0656261Z [36;1mwget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip[0m
+2026-11-11T05:52:02.0656828Z [36;1munzip -q commandlinetools-linux-11076708_latest.zip[0m
+2026-11-11T05:52:02.0657183Z [36;1mmv cmdline-tools latest[0m
+2026-11-11T05:52:02.0657538Z [36;1mexport PATH=$HOME/android-sdk/cmdline-tools/latest/bin:$PATH[0m
+2026-11-11T05:52:02.0657953Z [36;1myes | sdkmanager --licenses || true[0m
+2026-11-11T05:52:02.0658392Z [36;1msdkmanager "platform-tools" "platforms;android-31" "build-tools;31.0.0" || true[0m
+2026-11-11T05:52:02.0658875Z [36;1mecho "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV[0m
+2026-11-11T05:52:02.0659267Z [36;1mecho "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV[0m
+2026-11-11T05:52:02.0659850Z [36;1mecho "PATH=$HOME/android-sdk/cmdline-tools/latest/bin:$HOME/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV[0m
+2026-11-11T05:52:02.0726622Z shell: /usr/bin/bash -e {0}
+2026-11-11T05:52:02.0726883Z env:
+2026-11-11T05:52:02.0727149Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T05:52:02.0727588Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T05:52:02.0728024Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T05:52:02.0728406Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T05:52:02.0728807Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T05:52:02.0729187Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T05:52:02.0729517Z   ACLOCAL_PATH: /usr/share/aclocal
+2026-11-11T05:52:02.0729762Z ##[endgroup]
+2026-11-11T05:52:05.4537588Z Error: LinkageError occurred while loading main class com.android.sdklib.tool.sdkmanager.SdkManagerCli
+2026-11-11T05:52:05.4539632Z 	java.lang.UnsupportedClassVersionError: com/android/sdklib/tool/sdkmanager/SdkManagerCli has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+2026-11-11T05:52:05.4584609Z yes: standard output: Broken pipe
+2026-11-11T05:52:05.5785694Z Error: LinkageError occurred while loading main class com.android.sdklib.tool.sdkmanager.SdkManagerCli
+2026-11-11T05:52:05.5788045Z 	java.lang.UnsupportedClassVersionError: com/android/sdklib/tool/sdkmanager/SdkManagerCli has been compiled by a more recent version of the Java Runtime (class file version 61.0), this version of the Java Runtime only recognizes class file versions up to 55.0
