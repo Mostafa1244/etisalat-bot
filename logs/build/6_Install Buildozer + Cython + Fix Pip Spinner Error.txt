@@ -1,0 +1,88 @@
+﻿2026-11-11T06:19:47.5947496Z ##[group]Run echo "pip<24.1" > $HOME/pip-constraints.txt
+2026-11-11T06:19:47.5947970Z [36;1mecho "pip<24.1" > $HOME/pip-constraints.txt[0m
+2026-11-11T06:19:47.5948360Z [36;1mecho "setuptools<70.0.0" >> $HOME/pip-constraints.txt[0m
+2026-11-11T06:19:47.5948761Z [36;1mecho "wheel<0.44.0" >> $HOME/pip-constraints.txt[0m
+2026-11-11T06:19:47.5949139Z [36;1mecho "cython==0.29.36" >> $HOME/pip-constraints.txt[0m
+2026-11-11T06:19:47.5949450Z [36;1m[0m
+2026-11-11T06:19:47.5949789Z [36;1mpip install "pip<24.1" "setuptools<70.0.0" "wheel<0.44.0" "virtualenv<20.26.0"[0m
+2026-11-11T06:19:47.5950535Z [36;1mpip install "cython==0.29.36" "buildozer==1.5.0"[0m
+2026-11-11T06:19:47.5950847Z [36;1m[0m
+2026-11-11T06:19:47.5951143Z [36;1mecho "PIP_CONSTRAINT=$HOME/pip-constraints.txt" >> $GITHUB_ENV[0m
+2026-11-11T06:19:47.5951549Z [36;1mecho "VIRTUALENV_PIP=24.0" >> $GITHUB_ENV[0m
+2026-11-11T06:19:47.5951898Z [36;1mecho "VIRTUALENV_SETUPTOOLS=69.5.1" >> $GITHUB_ENV[0m
+2026-11-11T06:19:47.5952488Z [36;1mecho "VIRTUALENV_WHEEL=0.43.0" >> $GITHUB_ENV[0m
+2026-11-11T06:19:47.5952890Z [36;1mecho "VIRTUALENV_NO_PERIODIC_UPDATE=1" >> $GITHUB_ENV[0m
+2026-11-11T06:19:47.6015831Z shell: /usr/bin/bash -e {0}
+2026-11-11T06:19:47.6016086Z env:
+2026-11-11T06:19:47.6016360Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-11T06:19:47.6016803Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib/pkgconfig
+2026-11-11T06:19:47.6017240Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-11T06:19:47.6017632Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-11T06:19:47.6018014Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.18/x64
+2026-11-11T06:19:47.6018393Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.18/x64/lib
+2026-11-11T06:19:47.6018724Z   ACLOCAL_PATH: /usr/share/aclocal
+2026-11-11T06:19:47.6018970Z ##[endgroup]
+2026-11-11T06:19:50.1013161Z Collecting pip<24.1
+2026-11-11T06:19:50.1420675Z   Downloading pip-24.0-py3-none-any.whl.metadata (3.6 kB)
+2026-11-11T06:19:50.2457523Z Collecting setuptools<70.0.0
+2026-11-11T06:19:50.2498436Z   Downloading setuptools-69.5.1-py3-none-any.whl.metadata (6.2 kB)
+2026-11-11T06:19:50.2722691Z Collecting wheel<0.44.0
+2026-11-11T06:19:50.2778651Z   Downloading wheel-0.43.0-py3-none-any.whl.metadata (2.2 kB)
+2026-11-11T06:19:50.3188760Z Collecting virtualenv<20.26.0
+2026-11-11T06:19:50.3260942Z   Downloading virtualenv-20.25.3-py3-none-any.whl.metadata (4.4 kB)
+2026-11-11T06:19:50.3399507Z Collecting distlib<1,>=0.3.7 (from virtualenv<20.26.0)
+2026-11-11T06:19:50.3434476Z   Downloading distlib-0.4.4-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-11-11T06:19:50.3655788Z Collecting filelock<4,>=3.12.2 (from virtualenv<20.26.0)
+2026-11-11T06:19:50.3690793Z   Downloading filelock-3.32.7-py3-none-any.whl.metadata (2.0 kB)
+2026-11-11T06:19:50.3887593Z Collecting platformdirs<5,>=3.9.1 (from virtualenv<20.26.0)
+2026-11-11T06:19:50.3923373Z   Downloading platformdirs-4.14.5-py3-none-any.whl.metadata (5.7 kB)
+2026-11-11T06:19:50.3996771Z Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+2026-11-11T06:19:50.4308337Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 89.0 MB/s  0:00:00
+2026-11-11T06:19:50.4345821Z Downloading setuptools-69.5.1-py3-none-any.whl (894 kB)
+2026-11-11T06:19:50.4455854Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 894.6/894.6 kB 90.9 MB/s  0:00:00
+2026-11-11T06:19:50.4489386Z Downloading wheel-0.43.0-py3-none-any.whl (65 kB)
+2026-11-11T06:19:50.4570497Z Downloading virtualenv-20.25.3-py3-none-any.whl (3.9 MB)
+2026-11-11T06:19:50.5121500Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 72.0 MB/s  0:00:00
+2026-11-11T06:19:50.5157100Z Downloading distlib-0.4.4-py2.py3-none-any.whl (472 kB)
+2026-11-11T06:19:50.5240651Z Downloading filelock-3.32.7-py3-none-any.whl (100 kB)
+2026-11-11T06:19:50.5296820Z Downloading platformdirs-4.14.5-py3-none-any.whl (35 kB)
+2026-11-11T06:19:50.7465598Z Installing collected packages: distlib, wheel, setuptools, platformdirs, pip, filelock, virtualenv
+2026-11-11T06:19:50.8631602Z   Attempting uninstall: setuptools
+2026-11-11T06:19:50.8647493Z     Found existing installation: setuptools 79.0.1
+2026-11-11T06:19:51.0223333Z     Uninstalling setuptools-79.0.1:
+2026-11-11T06:19:51.0526621Z       Successfully uninstalled setuptools-79.0.1
+2026-11-11T06:19:51.6337044Z   Attempting uninstall: pip
+2026-11-11T06:19:51.6351855Z     Found existing installation: pip 26.2.2
+2026-11-11T06:19:51.6820840Z     Uninstalling pip-26.2.2:
+2026-11-11T06:19:51.6882758Z       Successfully uninstalled pip-26.2.2
+2026-11-11T06:19:53.0061618Z 
+2026-11-11T06:19:53.0072394Z Successfully installed distlib-0.4.4 filelock-3.32.7 pip-24.0 platformdirs-4.14.5 setuptools-69.5.1 virtualenv-20.25.3 wheel-0.43.0
+2026-11-11T06:19:53.9097115Z Collecting cython==0.29.36
+2026-11-11T06:19:53.9459341Z   Downloading Cython-0.29.36-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (3.1 kB)
+2026-11-11T06:19:53.9675345Z Collecting buildozer==1.5.0
+2026-11-11T06:19:53.9719611Z   Downloading buildozer-1.5.0-py3-none-any.whl.metadata (139 kB)
+2026-11-11T06:19:53.9946724Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.8/139.8 kB 6.6 MB/s eta 0:00:00
+2026-11-11T06:19:54.0202941Z Collecting pexpect (from buildozer==1.5.0)
+2026-11-11T06:19:54.0244527Z   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-11-11T06:19:54.0284742Z Requirement already satisfied: virtualenv in /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages (from buildozer==1.5.0) (20.25.3)
+2026-11-11T06:19:54.0496838Z Collecting sh (from buildozer==1.5.0)
+2026-11-11T06:19:54.0536163Z   Downloading sh-2.4.0-py3-none-any.whl.metadata (3.8 kB)
+2026-11-11T06:19:54.0716431Z Collecting ptyprocess>=0.5 (from pexpect->buildozer==1.5.0)
+2026-11-11T06:19:54.0756236Z   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2026-11-11T06:19:54.0972974Z Requirement already satisfied: distlib<1,>=0.3.7 in /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages (from virtualenv->buildozer==1.5.0) (0.4.4)
+2026-11-11T06:19:54.0984440Z Requirement already satisfied: filelock<4,>=3.12.2 in /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages (from virtualenv->buildozer==1.5.0) (3.32.7)
+2026-11-11T06:19:54.0994939Z Requirement already satisfied: platformdirs<5,>=3.9.1 in /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages (from virtualenv->buildozer==1.5.0) (4.14.5)
+2026-11-11T06:19:54.1087793Z Downloading Cython-0.29.36-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+2026-11-11T06:19:54.1457624Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 54.8 MB/s eta 0:00:00
+2026-11-11T06:19:54.1501628Z Downloading buildozer-1.5.0-py3-none-any.whl (86 kB)
+2026-11-11T06:19:54.1542920Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.9/86.9 kB 34.4 MB/s eta 0:00:00
+2026-11-11T06:19:54.1579148Z Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+2026-11-11T06:19:54.1620489Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 23.6 MB/s eta 0:00:00
+2026-11-11T06:19:54.1655114Z Downloading sh-2.4.0-py3-none-any.whl (48 kB)
+2026-11-11T06:19:54.1692954Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.6/48.6 kB 20.8 MB/s eta 0:00:00
+2026-11-11T06:19:54.1776331Z Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+2026-11-11T06:19:54.2655421Z Installing collected packages: ptyprocess, sh, pexpect, cython, buildozer
+2026-11-11T06:19:54.9725903Z Successfully installed buildozer-1.5.0 cython-0.29.36 pexpect-4.9.0 ptyprocess-0.7.0 sh-2.4.0
+2026-11-11T06:19:55.0980691Z 
+2026-11-11T06:19:55.0981411Z [notice] A new release of pip is available: 24.0 -> 26.3
+2026-11-11T06:19:55.0982262Z [notice] To update, run: pip install --upgrade pip

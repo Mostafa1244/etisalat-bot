@@ -1,36 +1,14 @@
-﻿2026-11-11T05:51:29.5024757Z ##[group]Run actions/setup-python@v5
-2026-11-11T05:51:29.5026040Z with:
-2026-11-11T05:51:29.5026862Z   python-version: 3.10
-2026-11-11T05:51:29.5027839Z   check-latest: false
-2026-11-11T05:51:29.5038999Z   token: ***
-2026-11-11T05:51:29.5039940Z   update-environment: true
-2026-11-11T05:51:29.5041007Z   allow-prereleases: false
-2026-11-11T05:51:29.5042155Z   freethreaded: false
-2026-11-11T05:51:29.5043067Z ##[endgroup]
-2026-11-11T05:51:29.6600331Z ##[group]Installed versions
-2026-11-11T05:51:29.6669632Z Version 3.10 was not found in the local cache
-2026-11-11T05:51:29.6832267Z (node:2204) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-2026-11-11T05:51:29.6835211Z (Use `node --trace-deprecation ...` to show where the warning was created)
-2026-11-11T05:51:30.4726101Z Version 3.10 is available for downloading
-2026-11-11T05:51:30.4727176Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-22.04-x64.tar.gz"
-2026-11-11T05:51:30.9246700Z Extract downloaded archive
-2026-11-11T05:51:30.9387092Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/c9d9dcf2-4762-4d40-871e-c0f64ab1234c -f /home/runner/work/_temp/377ee1e0-b15d-43c4-aee1-0748963f74d2
-2026-11-11T05:51:32.2436997Z Execute installation script
-2026-11-11T05:51:32.2550631Z Check if Python hostedtoolcache folder exist...
-2026-11-11T05:51:32.2552093Z Create Python 3.10.22 folder
-2026-11-11T05:51:32.2568844Z Copy Python binaries to hostedtoolcache folder
-2026-11-11T05:51:32.8075245Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
-2026-11-11T05:51:32.8125899Z Upgrading pip...
-2026-11-11T05:51:34.7365072Z Collecting pip
-2026-11-11T05:51:34.7758525Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
-2026-11-11T05:51:34.8182826Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 49.3 MB/s eta 0:00:00
-2026-11-11T05:51:34.8183399Z 
-2026-11-11T05:51:34.8812212Z Installing collected packages: pip
-2026-11-11T05:51:34.8813425Z Attempting uninstall: pip
-2026-11-11T05:51:34.8819413Z Found existing installation: pip 23.0.1
-2026-11-11T05:51:35.0673314Z Uninstalling pip-23.0.1:
-2026-11-11T05:51:35.0748323Z Successfully uninstalled pip-23.0.1
-2026-11-11T05:51:36.0185983Z Successfully installed pip-26.3
-2026-11-11T05:51:36.0668016Z Create complete file
-2026-11-11T05:51:36.0720567Z Successfully set up CPython (3.10.22)
-2026-11-11T05:51:36.0721919Z ##[endgroup]
+﻿2026-11-11T06:19:19.8377283Z ##[group]Run actions/setup-python@v5
+2026-11-11T06:19:19.8378856Z with:
+2026-11-11T06:19:19.8379769Z   python-version: 3.11
+2026-11-11T06:19:19.8381164Z   check-latest: false
+2026-11-11T06:19:19.8391225Z   token: ***
+2026-11-11T06:19:19.8392226Z   update-environment: true
+2026-11-11T06:19:19.8393370Z   allow-prereleases: false
+2026-11-11T06:19:19.8394481Z   freethreaded: false
+2026-11-11T06:19:19.8395476Z ##[endgroup]
+2026-11-11T06:19:19.9831710Z ##[group]Installed versions
+2026-11-11T06:19:19.9920556Z (node:2324) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-11T06:19:19.9924187Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-11T06:19:19.9926014Z Successfully set up CPython (3.11.18)
+2026-11-11T06:19:19.9927858Z ##[endgroup]

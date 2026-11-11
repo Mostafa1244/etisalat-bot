@@ -9,7 +9,7 @@ requirements = python3==3.11.9,hostpython3==3.11.9,kivy==2.3.0,requests,urllib3,
 orientation = portrait
 fullscreen = 0
 android.permissions = INTERNET
-android.api = 31
+android.api = 33
 android.minapi = 21
 android.ndk = 25b
 android.accept_sdk_license = True
