@@ -1,0 +1,53 @@
+﻿2026-11-11T04:41:34.0514350Z ##[group]Run buildozer -v android debug
+2026-11-11T04:41:34.0514723Z [36;1mbuildozer -v android debug[0m
+2026-11-11T04:41:34.0563825Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:34.0564079Z env:
+2026-11-11T04:41:34.0564350Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0564800Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:34.0565246Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566083Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566504Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566889Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:34.0567214Z ##[endgroup]
+2026-11-11T04:41:34.1537499Z Cloning into 'python-for-android'...
+2026-11-11T04:42:18.4820368Z [0m[1;34m# Ensure build layout[0m
+2026-11-11T04:42:18.4821244Z [0m[1;30m# Create directory /home/runner/.buildozer/cache[0m
+2026-11-11T04:42:18.4822656Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer[0m
+2026-11-11T04:42:18.4823875Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/bin[0m
+2026-11-11T04:42:18.4825128Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/applibs[0m
+2026-11-11T04:42:18.4826661Z [0m[1;30m# Create directory /home/runner/.buildozer/android/platform/android/platform[0m
+2026-11-11T04:42:18.4828048Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4829431Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/app[0m
+2026-11-11T04:42:18.4830461Z [0m[1;34m# Check configuration tokens[0m
+2026-11-11T04:42:18.4832758Z [0m[1;34m# Preparing build[0m
+2026-11-11T04:42:18.4833367Z [0m[1;34m# Check requirements for android[0m
+2026-11-11T04:42:18.4833909Z [0m[1;30m# Search for Git (git)[0m
+2026-11-11T04:42:18.4834273Z [0m[1;30m#  -> found at /usr/bin/git[0m
+2026-11-11T04:42:18.4834870Z [0m[1;30m# Search for Cython (cython)[0m
+2026-11-11T04:42:18.4835557Z [0m[1;30m#  -> found at /opt/hostedtoolcache/Python/3.10.22/x64/bin/cython[0m
+2026-11-11T04:42:18.4836332Z [0m[1;30m# Search for Java compiler (javac)[0m
+2026-11-11T04:42:18.4836777Z [0m[1;30m#  -> found at /usr/lib/jvm/temurin-25-jdk-amd64/bin/javac[0m
+2026-11-11T04:42:18.4837193Z [0m[1;30m# Search for Java keytool (keytool)[0m
+2026-11-11T04:42:18.4837630Z [0m[1;30m#  -> found at /usr/lib/jvm/temurin-25-jdk-amd64/bin/keytool[0m
+2026-11-11T04:42:18.4838028Z [0m[1;34m# Install platform[0m
+2026-11-11T04:42:18.4838687Z [0m[1;30m# Run 'git clone -b master --single-branch https://github.com/kivy/python-for-android.git python-for-android' ...[0m
+2026-11-11T04:42:18.4839472Z [0m[1;30m# Cwd /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4840636Z [0m[1;30m# Run '/opt/hostedtoolcache/Python/3.10.22/x64/bin/python -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...[0m
+2026-11-11T04:42:18.4841542Z [0m[1;30m# Cwd None[0m
+2026-11-11T04:42:18.4841850Z [0m[1;34m# Android ANT is missing, downloading[0m
+2026-11-11T04:42:18.4842424Z [0m[1;30m# Downloading https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz[0m
+2026-11-11T04:42:18.4843210Z [0m[1;30m# Extracting apache-ant-1.9.4-bin.tar.gz to /home/runner/.buildozer/android/platform/apache-ant-1.9.4[0m
+2026-11-11T04:42:18.4843776Z [0m[1;34m# Apache ANT installation done.[0m
+2026-11-11T04:42:18.4844254Z [0m[1;34m# Android SDK found at /home/runner/.buildozer/android/platform/android-sdk[0m
+2026-11-11T04:42:18.4844882Z [0m[1;34m# Recommended android's NDK version by p4a is: 28c[0m
+2026-11-11T04:42:18.4845289Z [0m[1;34m# Android NDK is missing, downloading[0m
+2026-11-11T04:42:18.4846031Z [0m[1;30m# Downloading https://dl.google.com/android/repository/android-ndk-r28c-linux.zip[0m
+2026-11-11T04:42:18.4846904Z [0m[1;34m# Unpacking Android NDK[0m
+2026-11-11T04:42:18.4847419Z [0m[1;30m# Extracting android-ndk-r28c-linux.zip to /home/runner/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4848127Z [0m[1;30m# Run 'unzip -q /home/runner/.buildozer/android/platform/android-ndk-r28c-linux.zip' ...[0m
+2026-11-11T04:42:18.4848685Z [0m[1;30m# Cwd /home/runner/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4849568Z [0m[1;30m# Rename /home/runner/.buildozer/android/platform/android-ndk-r28c to /home/runner/.buildozer/android/platform/android-ndk-r28c[0m
+2026-11-11T04:42:18.4850227Z [0m[1;34m# Android NDK installation done.[0m
+2026-11-11T04:42:18.4850650Z [0m[1;34m# Installing/updating SDK platform tools if necessary[0m
+2026-11-11T04:42:18.4851458Z [0m[1;31m# sdkmanager path "/home/runner/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager" does not exist, sdkmanager is not installed[0m
+2026-11-11T04:42:18.4970815Z ##[error]Process completed with exit code 1.

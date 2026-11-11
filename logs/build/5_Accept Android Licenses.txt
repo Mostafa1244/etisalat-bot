@@ -1,0 +1,13 @@
+﻿2026-11-11T04:41:32.0764251Z ##[group]Run mkdir -p ~/.buildozer/android/platform/android-sdk/licenses
+2026-11-11T04:41:32.0764830Z [36;1mmkdir -p ~/.buildozer/android/platform/android-sdk/licenses[0m
+2026-11-11T04:41:32.0765502Z [36;1mecho "24333f8a63b6825ea9c5514f83c2829b004d1fee" > ~/.buildozer/android/platform/android-sdk/licenses/android-sdk-license[0m
+2026-11-11T04:41:32.0767055Z [36;1mecho "84831b9409646a918e30573bab4c9c91346d8abd" > ~/.buildozer/android/platform/android-sdk/licenses/android-sdk-preview-license[0m
+2026-11-11T04:41:32.0819047Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:32.0819301Z env:
+2026-11-11T04:41:32.0819565Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0820029Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:32.0820467Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0820845Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0821222Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0821649Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:32.0821986Z ##[endgroup]

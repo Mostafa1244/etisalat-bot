@@ -1,0 +1,659 @@
+﻿2026-11-11T04:41:06.4257914Z Current runner version: '2.338.2'
+2026-11-11T04:41:06.4292811Z ##[group]Runner Image Provisioner
+2026-11-11T04:41:06.4294375Z Hosted Compute Agent
+2026-11-11T04:41:06.4295412Z Version: 20261028.624
+2026-11-11T04:41:06.4296771Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-11T04:41:06.4298218Z Build Date: 2026-10-28T21:51:42Z
+2026-11-11T04:41:06.4299571Z Worker ID: {61e48c76-fa63-49ba-bc31-2c1d24675fc4}
+2026-11-11T04:41:06.4301019Z Region: centralus
+2026-11-11T04:41:06.4302081Z Cloud: Azure
+2026-11-11T04:41:06.4303034Z ##[endgroup]
+2026-11-11T04:41:06.4305661Z ##[group]Operating System
+2026-11-11T04:41:06.4307061Z Ubuntu
+2026-11-11T04:41:06.4308036Z 26.04.1
+2026-11-11T04:41:06.4308970Z LTS
+2026-11-11T04:41:06.4309903Z ##[endgroup]
+2026-11-11T04:41:06.4311058Z ##[group]Runner Image
+2026-11-11T04:41:06.4312284Z Image: ubuntu-26.04
+2026-11-11T04:41:06.4313368Z Version: 20261101.186.1
+2026-11-11T04:41:06.4315657Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261101.186/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-11T04:41:06.4318875Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261101.186
+2026-11-11T04:41:06.4320793Z ##[endgroup]
+2026-11-11T04:41:06.4323041Z ##[group]GITHUB_TOKEN Permissions
+2026-11-11T04:41:06.4326206Z Contents: read
+2026-11-11T04:41:06.4327818Z Metadata: read
+2026-11-11T04:41:06.4328959Z Packages: read
+2026-11-11T04:41:06.4329951Z ##[endgroup]
+2026-11-11T04:41:06.4332872Z Secret source: Actions
+2026-11-11T04:41:06.4334554Z Cache mode: write
+2026-11-11T04:41:06.4336713Z Prepare workflow directory
+2026-11-11T04:41:06.4725388Z Prepare all required actions
+2026-11-11T04:41:06.4798099Z Getting action download info
+2026-11-11T04:41:06.7402844Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-11T04:41:06.9242668Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-11T04:41:07.0134540Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-11T04:41:07.2673524Z Complete job name: build
+2026-11-11T04:41:07.3650575Z ##[group]Run actions/checkout@v4
+2026-11-11T04:41:07.3651932Z with:
+2026-11-11T04:41:07.3652700Z   repository: Mostafa1244/etisalat-bot
+2026-11-11T04:41:07.3660653Z   token: ***
+2026-11-11T04:41:07.3661457Z   ssh-strict: true
+2026-11-11T04:41:07.3662219Z   ssh-user: git
+2026-11-11T04:41:07.3662935Z   persist-credentials: true
+2026-11-11T04:41:07.3663445Z   clean: true
+2026-11-11T04:41:07.3663886Z   sparse-checkout-cone-mode: true
+2026-11-11T04:41:07.3664398Z   fetch-depth: 1
+2026-11-11T04:41:07.3664823Z   fetch-tags: false
+2026-11-11T04:41:07.3665283Z   show-progress: true
+2026-11-11T04:41:07.3665736Z   lfs: false
+2026-11-11T04:41:07.3666432Z   submodules: false
+2026-11-11T04:41:07.3666883Z   set-safe-directory: true
+2026-11-11T04:41:07.3667386Z   allow-unsafe-pr-checkout: false
+2026-11-11T04:41:07.3668314Z ##[endgroup]
+2026-11-11T04:41:08.0107000Z Syncing repository: Mostafa1244/etisalat-bot
+2026-11-11T04:41:08.0109548Z ##[group]Getting Git version info
+2026-11-11T04:41:08.0110604Z Working directory is '/home/runner/work/etisalat-bot/etisalat-bot'
+2026-11-11T04:41:08.0112187Z [command]/usr/bin/git version
+2026-11-11T04:41:08.0128814Z git version 2.56.0
+2026-11-11T04:41:08.0150806Z ##[endgroup]
+2026-11-11T04:41:08.0167534Z Temporarily overriding HOME='/home/runner/work/_temp/25543aa5-65e5-4241-ba16-d9b4ae1f93a0' before making global git config changes
+2026-11-11T04:41:08.0170529Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-11T04:41:08.0172984Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etisalat-bot/etisalat-bot
+2026-11-11T04:41:08.0622347Z Deleting the contents of '/home/runner/work/etisalat-bot/etisalat-bot'
+2026-11-11T04:41:08.0626161Z ##[group]Initializing the repository
+2026-11-11T04:41:08.0631344Z [command]/usr/bin/git init /home/runner/work/etisalat-bot/etisalat-bot
+2026-11-11T04:41:08.1043269Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-11T04:41:08.1045665Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-11T04:41:08.1048038Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-11T04:41:08.1049695Z hint: call:
+2026-11-11T04:41:08.1051028Z hint:
+2026-11-11T04:41:08.1051939Z hint: 	git config --global init.defaultBranch <name>
+2026-11-11T04:41:08.1053222Z hint:
+2026-11-11T04:41:08.1054333Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-11T04:41:08.1056258Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-11T04:41:08.1057718Z hint:
+2026-11-11T04:41:08.1058629Z hint: 	git branch -m <name>
+2026-11-11T04:41:08.1059697Z hint:
+2026-11-11T04:41:08.1061068Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-11T04:41:08.1063351Z Initialized empty Git repository in /home/runner/work/etisalat-bot/etisalat-bot/.git/
+2026-11-11T04:41:08.1072639Z [command]/usr/bin/git remote add origin https://github.com/Mostafa1244/etisalat-bot
+2026-11-11T04:41:08.1144628Z ##[endgroup]
+2026-11-11T04:41:08.1146352Z ##[group]Disabling automatic garbage collection
+2026-11-11T04:41:08.1147694Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-11T04:41:08.1174673Z ##[endgroup]
+2026-11-11T04:41:08.1175510Z ##[group]Setting up auth
+2026-11-11T04:41:08.1183541Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-11T04:41:08.1221254Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-11T04:41:08.2141827Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-11T04:41:08.2178597Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-11T04:41:08.2440207Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-11T04:41:08.2475076Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-11T04:41:08.2737765Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-11T04:41:08.2937479Z ##[endgroup]
+2026-11-11T04:41:08.2938567Z ##[group]Fetching the repository
+2026-11-11T04:41:08.2947264Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a6909926d7ff299e43213cb03d3a04e768eee409:refs/remotes/origin/main
+2026-11-11T04:41:08.6663257Z From https://github.com/Mostafa1244/etisalat-bot
+2026-11-11T04:41:08.6665625Z  * [new ref]         a6909926d7ff299e43213cb03d3a04e768eee409 -> origin/main
+2026-11-11T04:41:08.6671102Z ##[endgroup]
+2026-11-11T04:41:08.6673296Z ##[group]Determining the checkout info
+2026-11-11T04:41:08.6676049Z ##[endgroup]
+2026-11-11T04:41:08.6680144Z [command]/usr/bin/git sparse-checkout disable
+2026-11-11T04:41:08.6729681Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-11T04:41:08.6759772Z ##[group]Checking out the ref
+2026-11-11T04:41:08.6763956Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-11T04:41:08.7048564Z Switched to a new branch 'main'
+2026-11-11T04:41:08.7055395Z branch 'main' set up to track 'origin/main'.
+2026-11-11T04:41:08.7062099Z ##[endgroup]
+2026-11-11T04:41:08.7103128Z [command]/usr/bin/git log -1 --format=%H
+2026-11-11T04:41:08.7126789Z a6909926d7ff299e43213cb03d3a04e768eee409
+2026-11-11T04:41:08.7601981Z ##[group]Run actions/setup-python@v5
+2026-11-11T04:41:08.7603311Z with:
+2026-11-11T04:41:08.7604235Z   python-version: 3.10
+2026-11-11T04:41:08.7605360Z   check-latest: false
+2026-11-11T04:41:08.7616858Z   token: ***
+2026-11-11T04:41:08.7617882Z   update-environment: true
+2026-11-11T04:41:08.7619033Z   allow-prereleases: false
+2026-11-11T04:41:08.7620142Z   freethreaded: false
+2026-11-11T04:41:08.7621151Z ##[endgroup]
+2026-11-11T04:41:08.9175349Z ##[group]Installed versions
+2026-11-11T04:41:08.9680991Z Version 3.10 was not found in the local cache
+2026-11-11T04:41:09.0142366Z (node:2375) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-11T04:41:09.0145546Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-11T04:41:09.9124046Z Version 3.10 is available for downloading
+2026-11-11T04:41:09.9124854Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-26.04-x64.tar.gz"
+2026-11-11T04:41:10.4303205Z Extract downloaded archive
+2026-11-11T04:41:10.4442916Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b7d701c6-b587-425b-9467-b16723ccd7bb -f /home/runner/work/_temp/faac526d-b968-4e21-ae64-bd687871ad7f
+2026-11-11T04:41:11.3562850Z Execute installation script
+2026-11-11T04:41:11.3700781Z Check if Python hostedtoolcache folder exist...
+2026-11-11T04:41:11.3701738Z Create Python 3.10.22 folder
+2026-11-11T04:41:11.3728612Z Copy Python binaries to hostedtoolcache folder
+2026-11-11T04:41:11.8243305Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-11T04:41:11.8347237Z Upgrading pip...
+2026-11-11T04:41:13.5556560Z Collecting pip
+2026-11-11T04:41:13.6174169Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-11T04:41:13.6978361Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 25.5 MB/s eta 0:00:00
+2026-11-11T04:41:13.6979125Z 
+2026-11-11T04:41:13.7573873Z Installing collected packages: pip
+2026-11-11T04:41:13.7575508Z Attempting uninstall: pip
+2026-11-11T04:41:13.7581945Z Found existing installation: pip 23.0.1
+2026-11-11T04:41:13.9284238Z Uninstalling pip-23.0.1:
+2026-11-11T04:41:13.9387465Z Successfully uninstalled pip-23.0.1
+2026-11-11T04:41:14.8244241Z Successfully installed pip-26.3
+2026-11-11T04:41:14.8729286Z Create complete file
+2026-11-11T04:41:14.8794900Z Successfully set up CPython (3.10.22)
+2026-11-11T04:41:14.8796324Z ##[endgroup]
+2026-11-11T04:41:14.8988298Z ##[group]Run sudo apt-get update
+2026-11-11T04:41:14.8988669Z [36;1msudo apt-get update[0m
+2026-11-11T04:41:14.8989455Z [36;1msudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev[0m
+2026-11-11T04:41:14.9045152Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:14.9045446Z env:
+2026-11-11T04:41:14.9045735Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:14.9046376Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:14.9046818Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:14.9047236Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:14.9047618Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:14.9048006Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:14.9048329Z ##[endgroup]
+2026-11-11T04:41:14.9798623Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-11T04:41:15.0065609Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+2026-11-11T04:41:15.0093308Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+2026-11-11T04:41:15.0106426Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+2026-11-11T04:41:15.0176913Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+2026-11-11T04:41:15.0178376Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+2026-11-11T04:41:15.0577255Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [869 kB]
+2026-11-11T04:41:15.0779645Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [195 kB]
+2026-11-11T04:41:15.0807688Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [390 kB]
+2026-11-11T04:41:15.0827400Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [122 kB]
+2026-11-11T04:41:15.0857378Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64v3 Packages [603 kB]
+2026-11-11T04:41:15.0875667Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [125 kB]
+2026-11-11T04:41:15.0904398Z Get:13 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [140 kB]
+2026-11-11T04:41:15.1027922Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [718 kB]
+2026-11-11T04:41:15.1066632Z Get:20 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [154 kB]
+2026-11-11T04:41:15.1085990Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [157 kB]
+2026-11-11T04:41:15.1096549Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [212 kB]
+2026-11-11T04:41:15.1126803Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [70.7 kB]
+2026-11-11T04:41:15.1128484Z Get:21 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main armhf Packages [1077 B]
+2026-11-11T04:41:15.1600060Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted amd64v3 Packages [586 kB]
+2026-11-11T04:41:15.1632517Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted Translation-en [121 kB]
+2026-11-11T04:41:17.0951690Z Fetched 4878 kB in 0s (11.9 MB/s)
+2026-11-11T04:41:17.7217547Z Reading package lists...
+2026-11-11T04:41:17.7544557Z Reading package lists...
+2026-11-11T04:41:17.8807776Z Building dependency tree...
+2026-11-11T04:41:17.8817505Z Reading state information...
+2026-11-11T04:41:17.9108179Z git is already the newest version (1:2.56.0-0ppa1~ubuntu26.04.2).
+2026-11-11T04:41:17.9109018Z git set to manually installed.
+2026-11-11T04:41:17.9109636Z zip is already the newest version (3.0-15ubuntu3).
+2026-11-11T04:41:17.9111052Z unzip is already the newest version (6.0-29ubuntu1).
+2026-11-11T04:41:17.9111911Z python3-pip is already the newest version (25.1.1+dfsg-1ubuntu2).
+2026-11-11T04:41:17.9112642Z autoconf is already the newest version (2.72-3.1ubuntu2).
+2026-11-11T04:41:17.9113090Z libtool is already the newest version (2.5.4-9).
+2026-11-11T04:41:17.9113504Z pkg-config is already the newest version (2.5.1-4).
+2026-11-11T04:41:17.9114030Z zlib1g-dev is already the newest version (1:1.3.dfsg+really1.3.1-1ubuntu3.2).
+2026-11-11T04:41:17.9114605Z libncurses-dev is already the newest version (6.6+20251231-1).
+2026-11-11T04:41:17.9115045Z libncurses-dev set to manually installed.
+2026-11-11T04:41:17.9115566Z libtinfo6 is already the newest version (6.6+20251231-1).
+2026-11-11T04:41:17.9116241Z libtinfo6 set to manually installed.
+2026-11-11T04:41:17.9116577Z libffi-dev is already the newest version (3.5.2-4).
+2026-11-11T04:41:17.9116927Z libffi-dev set to manually installed.
+2026-11-11T04:41:17.9117306Z libssl-dev is already the newest version (3.5.5-1ubuntu3.7).
+2026-11-11T04:41:17.9629322Z Solving dependencies...
+2026-11-11T04:41:18.0435686Z The following additional packages will be installed:
+2026-11-11T04:41:18.0436960Z   ca-certificates ca-certificates-java cmake-data libatk-wrapper-java
+2026-11-11T04:41:18.0438046Z   libatk-wrapper-java-jni libgif7 libice-dev libjsoncpp26 libpcsclite1
+2026-11-11T04:41:18.0440941Z   librhash1 libsm-dev libx11-dev libxau-dev libxcb-shape0 libxcb1-dev
+2026-11-11T04:41:18.0441883Z   libxdmcp-dev libxt-dev libxv1 libxxf86dga1 luit openjdk-17-jdk-headless
+2026-11-11T04:41:18.0443472Z   openjdk-17-jre openjdk-17-jre-headless uuid-dev x11-utils x11proto-dev
+2026-11-11T04:41:18.0444000Z   xorg-sgml-doctools xtrans-dev
+2026-11-11T04:41:18.0450681Z Suggested packages:
+2026-11-11T04:41:18.0451281Z   cmake-doc cmake-format elpa-cmake-mode ninja-build libice-doc pcscd
+2026-11-11T04:41:18.0452161Z   libsm-doc libx11-doc libxcb-doc libxt-doc openjdk-17-demo openjdk-17-source
+2026-11-11T04:41:18.0453036Z   visualvm libnss-mdns fonts-ipafont-gothic fonts-ipafont-mincho
+2026-11-11T04:41:18.0453797Z   fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic mesa-utils
+2026-11-11T04:41:18.0747433Z The following NEW packages will be installed:
+2026-11-11T04:41:18.0748164Z   ca-certificates-java cmake cmake-data libatk-wrapper-java
+2026-11-11T04:41:18.0749120Z   libatk-wrapper-java-jni libgif7 libice-dev libjsoncpp26 libpcsclite1
+2026-11-11T04:41:18.0751111Z   librhash1 libsm-dev libx11-dev libxau-dev libxcb-shape0 libxcb1-dev
+2026-11-11T04:41:18.0751710Z   libxdmcp-dev libxt-dev libxv1 libxxf86dga1 luit openjdk-17-jdk
+2026-11-11T04:41:18.0752750Z   openjdk-17-jdk-headless openjdk-17-jre openjdk-17-jre-headless uuid-dev
+2026-11-11T04:41:18.0753453Z   x11-utils x11proto-dev xorg-sgml-doctools xtrans-dev
+2026-11-11T04:41:18.0755372Z The following packages will be upgraded:
+2026-11-11T04:41:18.0763070Z   ca-certificates
+2026-11-11T04:41:18.0961267Z 1 upgraded, 29 newly installed, 0 to remove and 51 not upgraded.
+2026-11-11T04:41:18.0961920Z Need to get 142 MB of archives.
+2026-11-11T04:41:18.0962499Z After this operation, 345 MB of additional disk space will be used.
+2026-11-11T04:41:18.0963188Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+2026-11-11T04:41:18.1400921Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 ca-certificates all 20260816ubuntu0.26.04.2 [138 kB]
+2026-11-11T04:41:18.1774087Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 ca-certificates-java all 20260311ubuntu0.26.04.2 [12.1 kB]
+2026-11-11T04:41:18.2058029Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 cmake-data all 4.2.3-2ubuntu2 [2581 kB]
+2026-11-11T04:41:18.3285028Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libjsoncpp26 amd64 1.9.6-5 [85.0 kB]
+2026-11-11T04:41:18.3573317Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 librhash1 amd64 1.4.6-1.1 [133 kB]
+2026-11-11T04:41:18.3864927Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 cmake amd64 4.2.3-2ubuntu2 [14.1 MB]
+2026-11-11T04:41:18.5666549Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxcb-shape0 amd64 1.17.0-2ubuntu1 [6196 B]
+2026-11-11T04:41:18.5974812Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxv1 amd64 2:1.0.13-1 [11.0 kB]
+2026-11-11T04:41:18.6284870Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxxf86dga1 amd64 2:1.1.5-1build2 [12.0 kB]
+2026-11-11T04:41:18.6593958Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 x11-utils amd64 7.7+7build1 [192 kB]
+2026-11-11T04:41:18.6888199Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libatk-wrapper-java all 0.44.0-1 [55.2 kB]
+2026-11-11T04:41:18.7199763Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libatk-wrapper-java-jni amd64 0.44.0-1 [48.6 kB]
+2026-11-11T04:41:18.7509431Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgif7 amd64 5.2.2-1ubuntu3.2 [34.9 kB]
+2026-11-11T04:41:18.7817158Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xorg-sgml-doctools all 1:1.11-1.1build1 [10.3 kB]
+2026-11-11T04:41:18.8127362Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 x11proto-dev all 2025.1-1 [608 kB]
+2026-11-11T04:41:18.8473179Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libice-dev amd64 2:1.1.1-1build1 [53.7 kB]
+2026-11-11T04:41:18.8783090Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libpcsclite1 amd64 2.4.1-1 [24.6 kB]
+2026-11-11T04:41:18.9090635Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 uuid-dev amd64 2.41.3-3ubuntu2.2 [49.1 kB]
+2026-11-11T04:41:18.9800507Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsm-dev amd64 2:1.2.6-1build1 [18.8 kB]
+2026-11-11T04:41:19.0150469Z Get:21 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxau-dev amd64 1:1.0.11-1build2 [9780 B]
+2026-11-11T04:41:19.0436343Z Get:22 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxdmcp-dev amd64 1:1.1.5-2 [25.7 kB]
+2026-11-11T04:41:19.0721230Z Get:23 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 xtrans-dev all 1.6.0-1build1 [66.2 kB]
+2026-11-11T04:41:19.1011961Z Get:24 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxcb1-dev amd64 1.17.0-2ubuntu1 [86.4 kB]
+2026-11-11T04:41:19.1302212Z Get:25 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libx11-dev amd64 2:1.8.13-1ubuntu0.1 [743 kB]
+2026-11-11T04:41:19.1623120Z Get:26 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libxt-dev amd64 1:1.2.1-1.3build1 [397 kB]
+2026-11-11T04:41:19.1927702Z Get:27 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 luit amd64 2.0.20250912-1 [41.8 kB]
+2026-11-11T04:41:19.2247031Z Get:28 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 openjdk-17-jre-headless amd64 17.0.21.0.3+1-1~26.04.1 [48.4 MB]
+2026-11-11T04:41:19.8822269Z Get:29 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 openjdk-17-jre amd64 17.0.21.0.3+1-1~26.04.1 [230 kB]
+2026-11-11T04:41:19.9121573Z Get:30 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 openjdk-17-jdk-headless amd64 17.0.21.0.3+1-1~26.04.1 [72.2 MB]
+2026-11-11T04:41:20.6810249Z Get:31 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 openjdk-17-jdk amd64 17.0.21.0.3+1-1~26.04.1 [1531 kB]
+2026-11-11T04:41:20.9576842Z Preconfiguring packages ...
+2026-11-11T04:41:21.3943408Z Fetched 142 MB in 3s (54.5 MB/s)
+2026-11-11T04:41:21.4450660Z (Reading database ... 
+2026-11-11T04:41:21.4451125Z (Reading database ... 5%
+2026-11-11T04:41:21.4451381Z (Reading database ... 10%
+2026-11-11T04:41:21.4451643Z (Reading database ... 15%
+2026-11-11T04:41:21.4451872Z (Reading database ... 20%
+2026-11-11T04:41:21.4452101Z (Reading database ... 25%
+2026-11-11T04:41:21.4453084Z (Reading database ... 30%
+2026-11-11T04:41:21.4453335Z (Reading database ... 35%
+2026-11-11T04:41:21.4453763Z (Reading database ... 40%
+2026-11-11T04:41:21.4453996Z (Reading database ... 45%
+2026-11-11T04:41:21.4454215Z (Reading database ... 50%
+2026-11-11T04:41:21.5453323Z (Reading database ... 55%
+2026-11-11T04:41:21.7136544Z (Reading database ... 60%
+2026-11-11T04:41:21.9006052Z (Reading database ... 65%
+2026-11-11T04:41:22.0513550Z (Reading database ... 70%
+2026-11-11T04:41:22.1968932Z (Reading database ... 75%
+2026-11-11T04:41:22.3732885Z (Reading database ... 80%
+2026-11-11T04:41:22.5444237Z (Reading database ... 85%
+2026-11-11T04:41:22.6807463Z (Reading database ... 90%
+2026-11-11T04:41:22.8057113Z (Reading database ... 95%
+2026-11-11T04:41:22.8057580Z (Reading database ... 100%
+2026-11-11T04:41:22.8058213Z (Reading database ... 213197 files and directories currently installed.)
+2026-11-11T04:41:22.8096918Z Preparing to unpack .../00-ca-certificates_20260816ubuntu0.26.04.2_all.deb ...
+2026-11-11T04:41:22.8276326Z Unpacking ca-certificates (20260816ubuntu0.26.04.2) over (20260816ubuntu0.26.04.1) ...
+2026-11-11T04:41:22.8873802Z Selecting previously unselected package ca-certificates-java.
+2026-11-11T04:41:22.9008959Z Preparing to unpack .../01-ca-certificates-java_20260311ubuntu0.26.04.2_all.deb ...
+2026-11-11T04:41:22.9046854Z Unpacking ca-certificates-java (20260311ubuntu0.26.04.2) ...
+2026-11-11T04:41:22.9331951Z Selecting previously unselected package cmake-data.
+2026-11-11T04:41:22.9466451Z Preparing to unpack .../02-cmake-data_4.2.3-2ubuntu2_all.deb ...
+2026-11-11T04:41:22.9557589Z Unpacking cmake-data (4.2.3-2ubuntu2) ...
+2026-11-11T04:41:23.4997943Z Selecting previously unselected package libjsoncpp26:amd64.
+2026-11-11T04:41:23.5150503Z Preparing to unpack .../03-libjsoncpp26_1.9.6-5_amd64v3.deb ...
+2026-11-11T04:41:23.5168943Z Unpacking libjsoncpp26:amd64 (1.9.6-5) ...
+2026-11-11T04:41:23.5397174Z Selecting previously unselected package librhash1:amd64.
+2026-11-11T04:41:23.5534374Z Preparing to unpack .../04-librhash1_1.4.6-1.1_amd64v3.deb ...
+2026-11-11T04:41:23.5542117Z Unpacking librhash1:amd64 (1.4.6-1.1) ...
+2026-11-11T04:41:23.5766775Z Selecting previously unselected package cmake.
+2026-11-11T04:41:23.5903726Z Preparing to unpack .../05-cmake_4.2.3-2ubuntu2_amd64v3.deb ...
+2026-11-11T04:41:23.5912358Z Unpacking cmake (4.2.3-2ubuntu2) ...
+2026-11-11T04:41:23.7826167Z Selecting previously unselected package libxcb-shape0:amd64.
+2026-11-11T04:41:23.7965079Z Preparing to unpack .../06-libxcb-shape0_1.17.0-2ubuntu1_amd64v3.deb ...
+2026-11-11T04:41:23.7973352Z Unpacking libxcb-shape0:amd64 (1.17.0-2ubuntu1) ...
+2026-11-11T04:41:23.8189441Z Selecting previously unselected package libxv1:amd64.
+2026-11-11T04:41:23.8328114Z Preparing to unpack .../07-libxv1_2%3a1.0.13-1_amd64v3.deb ...
+2026-11-11T04:41:23.8338178Z Unpacking libxv1:amd64 (2:1.0.13-1) ...
+2026-11-11T04:41:23.8549595Z Selecting previously unselected package libxxf86dga1:amd64.
+2026-11-11T04:41:23.8686407Z Preparing to unpack .../08-libxxf86dga1_2%3a1.1.5-1build2_amd64v3.deb ...
+2026-11-11T04:41:23.8695414Z Unpacking libxxf86dga1:amd64 (2:1.1.5-1build2) ...
+2026-11-11T04:41:23.8910228Z Selecting previously unselected package x11-utils.
+2026-11-11T04:41:23.9056367Z Preparing to unpack .../09-x11-utils_7.7+7build1_amd64v3.deb ...
+2026-11-11T04:41:23.9063814Z Unpacking x11-utils (7.7+7build1) ...
+2026-11-11T04:41:23.9388266Z Selecting previously unselected package libatk-wrapper-java.
+2026-11-11T04:41:23.9523401Z Preparing to unpack .../10-libatk-wrapper-java_0.44.0-1_all.deb ...
+2026-11-11T04:41:23.9531692Z Unpacking libatk-wrapper-java (0.44.0-1) ...
+2026-11-11T04:41:23.9739814Z Selecting previously unselected package libatk-wrapper-java-jni:amd64.
+2026-11-11T04:41:23.9871479Z Preparing to unpack .../11-libatk-wrapper-java-jni_0.44.0-1_amd64v3.deb ...
+2026-11-11T04:41:23.9879096Z Unpacking libatk-wrapper-java-jni:amd64 (0.44.0-1) ...
+2026-11-11T04:41:24.0096936Z Selecting previously unselected package libgif7:amd64.
+2026-11-11T04:41:24.0224553Z Preparing to unpack .../12-libgif7_5.2.2-1ubuntu3.2_amd64v3.deb ...
+2026-11-11T04:41:24.0233593Z Unpacking libgif7:amd64 (5.2.2-1ubuntu3.2) ...
+2026-11-11T04:41:24.0441594Z Selecting previously unselected package xorg-sgml-doctools.
+2026-11-11T04:41:24.0568697Z Preparing to unpack .../13-xorg-sgml-doctools_1%3a1.11-1.1build1_all.deb ...
+2026-11-11T04:41:24.0576509Z Unpacking xorg-sgml-doctools (1:1.11-1.1build1) ...
+2026-11-11T04:41:24.0821335Z Selecting previously unselected package x11proto-dev.
+2026-11-11T04:41:24.0948489Z Preparing to unpack .../14-x11proto-dev_2025.1-1_all.deb ...
+2026-11-11T04:41:24.0956734Z Unpacking x11proto-dev (2025.1-1) ...
+2026-11-11T04:41:24.1425970Z Selecting previously unselected package libice-dev:amd64.
+2026-11-11T04:41:24.1560249Z Preparing to unpack .../15-libice-dev_2%3a1.1.1-1build1_amd64v3.deb ...
+2026-11-11T04:41:24.1569141Z Unpacking libice-dev:amd64 (2:1.1.1-1build1) ...
+2026-11-11T04:41:24.1808779Z Selecting previously unselected package libpcsclite1:amd64.
+2026-11-11T04:41:24.1944636Z Preparing to unpack .../16-libpcsclite1_2.4.1-1_amd64v3.deb ...
+2026-11-11T04:41:24.1954198Z Unpacking libpcsclite1:amd64 (2.4.1-1) ...
+2026-11-11T04:41:24.2164729Z Selecting previously unselected package uuid-dev:amd64.
+2026-11-11T04:41:24.2298615Z Preparing to unpack .../17-uuid-dev_2.41.3-3ubuntu2.2_amd64v3.deb ...
+2026-11-11T04:41:24.2307595Z Unpacking uuid-dev:amd64 (2.41.3-3ubuntu2.2) ...
+2026-11-11T04:41:24.2558990Z Selecting previously unselected package libsm-dev:amd64.
+2026-11-11T04:41:24.2689956Z Preparing to unpack .../18-libsm-dev_2%3a1.2.6-1build1_amd64v3.deb ...
+2026-11-11T04:41:24.2697784Z Unpacking libsm-dev:amd64 (2:1.2.6-1build1) ...
+2026-11-11T04:41:24.2910465Z Selecting previously unselected package libxau-dev:amd64.
+2026-11-11T04:41:24.3040239Z Preparing to unpack .../19-libxau-dev_1%3a1.0.11-1build2_amd64v3.deb ...
+2026-11-11T04:41:24.3047683Z Unpacking libxau-dev:amd64 (1:1.0.11-1build2) ...
+2026-11-11T04:41:24.3266542Z Selecting previously unselected package libxdmcp-dev:amd64.
+2026-11-11T04:41:24.3396050Z Preparing to unpack .../20-libxdmcp-dev_1%3a1.1.5-2_amd64v3.deb ...
+2026-11-11T04:41:24.3404422Z Unpacking libxdmcp-dev:amd64 (1:1.1.5-2) ...
+2026-11-11T04:41:24.3612709Z Selecting previously unselected package xtrans-dev.
+2026-11-11T04:41:24.3740929Z Preparing to unpack .../21-xtrans-dev_1.6.0-1build1_all.deb ...
+2026-11-11T04:41:24.3749301Z Unpacking xtrans-dev (1.6.0-1build1) ...
+2026-11-11T04:41:24.3972607Z Selecting previously unselected package libxcb1-dev:amd64.
+2026-11-11T04:41:24.4101840Z Preparing to unpack .../22-libxcb1-dev_1.17.0-2ubuntu1_amd64v3.deb ...
+2026-11-11T04:41:24.4109542Z Unpacking libxcb1-dev:amd64 (1.17.0-2ubuntu1) ...
+2026-11-11T04:41:24.4338978Z Selecting previously unselected package libx11-dev:amd64.
+2026-11-11T04:41:24.4469072Z Preparing to unpack .../23-libx11-dev_2%3a1.8.13-1ubuntu0.1_amd64v3.deb ...
+2026-11-11T04:41:24.4477834Z Unpacking libx11-dev:amd64 (2:1.8.13-1ubuntu0.1) ...
+2026-11-11T04:41:24.4776658Z Selecting previously unselected package libxt-dev:amd64.
+2026-11-11T04:41:24.4909117Z Preparing to unpack .../24-libxt-dev_1%3a1.2.1-1.3build1_amd64v3.deb ...
+2026-11-11T04:41:24.4917316Z Unpacking libxt-dev:amd64 (1:1.2.1-1.3build1) ...
+2026-11-11T04:41:24.5398838Z Selecting previously unselected package luit.
+2026-11-11T04:41:24.5532061Z Preparing to unpack .../25-luit_2.0.20250912-1_amd64v3.deb ...
+2026-11-11T04:41:24.5676336Z Adding 'diversion of /usr/bin/luit to /usr/bin/luit.x11-utils by luit'
+2026-11-11T04:41:24.5792536Z Adding 'diversion of /usr/share/man/man1/luit.1.gz to /usr/share/man/man1/luit.x11-utils.1.gz by luit'
+2026-11-11T04:41:24.5810799Z Unpacking luit (2.0.20250912-1) ...
+2026-11-11T04:41:24.6046273Z Selecting previously unselected package openjdk-17-jre-headless:amd64.
+2026-11-11T04:41:24.6180005Z Preparing to unpack .../26-openjdk-17-jre-headless_17.0.21.0.3+1-1~26.04.1_amd64v3.deb ...
+2026-11-11T04:41:24.6188747Z Unpacking openjdk-17-jre-headless:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:25.2092733Z Selecting previously unselected package openjdk-17-jre:amd64.
+2026-11-11T04:41:25.2234198Z Preparing to unpack .../27-openjdk-17-jre_17.0.21.0.3+1-1~26.04.1_amd64v3.deb ...
+2026-11-11T04:41:25.2243387Z Unpacking openjdk-17-jre:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:25.2562449Z Selecting previously unselected package openjdk-17-jdk-headless:amd64.
+2026-11-11T04:41:25.2701842Z Preparing to unpack .../28-openjdk-17-jdk-headless_17.0.21.0.3+1-1~26.04.1_amd64v3.deb ...
+2026-11-11T04:41:25.2783603Z Unpacking openjdk-17-jdk-headless:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:25.5152592Z Selecting previously unselected package openjdk-17-jdk:amd64.
+2026-11-11T04:41:25.5292798Z Preparing to unpack .../29-openjdk-17-jdk_17.0.21.0.3+1-1~26.04.1_amd64v3.deb ...
+2026-11-11T04:41:25.5301281Z Unpacking openjdk-17-jdk:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:25.5800851Z Setting up luit (2.0.20250912-1) ...
+2026-11-11T04:41:25.5830157Z Setting up libxcb-shape0:amd64 (1.17.0-2ubuntu1) ...
+2026-11-11T04:41:25.5882396Z Setting up libxxf86dga1:amd64 (2:1.1.5-1build2) ...
+2026-11-11T04:41:25.5903578Z Setting up ca-certificates (20260816ubuntu0.26.04.2) ...
+2026-11-11T04:41:27.4478793Z Updating certificates in /etc/ssl/certs...
+2026-11-11T04:41:28.2445298Z 0 added, 0 removed; done.
+2026-11-11T04:41:28.2446663Z Running hooks in /etc/ca-certificates/update.d...
+2026-11-11T04:41:28.3154184Z /etc/ssl/certs/adoptium/cacerts successfully populated.
+2026-11-11T04:41:28.3157264Z done.
+2026-11-11T04:41:28.3450007Z Setting up xtrans-dev (1.6.0-1build1) ...
+2026-11-11T04:41:28.3469343Z Setting up libjsoncpp26:amd64 (1.9.6-5) ...
+2026-11-11T04:41:28.3489862Z Setting up uuid-dev:amd64 (2.41.3-3ubuntu2.2) ...
+2026-11-11T04:41:28.3536404Z Setting up libxv1:amd64 (2:1.0.13-1) ...
+2026-11-11T04:41:28.3559859Z Setting up libpcsclite1:amd64 (2.4.1-1) ...
+2026-11-11T04:41:28.3580134Z Setting up libgif7:amd64 (5.2.2-1ubuntu3.2) ...
+2026-11-11T04:41:28.3601415Z Setting up x11-utils (7.7+7build1) ...
+2026-11-11T04:41:28.3750628Z Setting up xorg-sgml-doctools (1:1.11-1.1build1) ...
+2026-11-11T04:41:28.3770581Z Setting up cmake-data (4.2.3-2ubuntu2) ...
+2026-11-11T04:41:28.3852351Z Setting up librhash1:amd64 (1.4.6-1.1) ...
+2026-11-11T04:41:28.3873338Z Setting up libatk-wrapper-java (0.44.0-1) ...
+2026-11-11T04:41:28.3892824Z Setting up ca-certificates-java (20260311ubuntu0.26.04.2) ...
+2026-11-11T04:41:29.2676498Z Adding debian:ACCVRAIZ1.pem
+2026-11-11T04:41:29.2699697Z Adding debian:AC_RAIZ_FNMT-RCM.pem
+2026-11-11T04:41:29.2979327Z Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+2026-11-11T04:41:29.3003826Z Adding debian:ANF_Secure_Server_Root_CA.pem
+2026-11-11T04:41:29.3026397Z Adding debian:Actalis_Authentication_Root_CA.pem
+2026-11-11T04:41:29.3040540Z Adding debian:Amazon_Root_CA_1.pem
+2026-11-11T04:41:29.3062883Z Adding debian:Amazon_Root_CA_2.pem
+2026-11-11T04:41:29.3073017Z Adding debian:Amazon_Root_CA_3.pem
+2026-11-11T04:41:29.3084162Z Adding debian:Amazon_Root_CA_4.pem
+2026-11-11T04:41:29.3096595Z Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+2026-11-11T04:41:29.3118661Z Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+2026-11-11T04:41:29.3144590Z Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+2026-11-11T04:41:29.3166572Z Adding debian:BJCA_Global_Root_CA1.pem
+2026-11-11T04:41:29.3179852Z Adding debian:BJCA_Global_Root_CA2.pem
+2026-11-11T04:41:29.3205076Z Adding debian:Buypass_Class_2_Root_CA.pem
+2026-11-11T04:41:29.3224693Z Adding debian:Buypass_Class_3_Root_CA.pem
+2026-11-11T04:41:29.3248967Z Adding debian:CA_Disig_Root_R2.pem
+2026-11-11T04:41:29.3268261Z Adding debian:CFCA_EV_ROOT.pem
+2026-11-11T04:41:29.3280927Z Adding debian:COMODO_ECC_Certification_Authority.pem
+2026-11-11T04:41:29.3302145Z Adding debian:COMODO_RSA_Certification_Authority.pem
+2026-11-11T04:41:29.3312509Z Adding debian:Certainly_Root_E1.pem
+2026-11-11T04:41:29.3333268Z Adding debian:Certainly_Root_R1.pem
+2026-11-11T04:41:29.3362060Z Adding debian:Certigna_Root_CA.pem
+2026-11-11T04:41:29.3374623Z Adding debian:Certum_EC-384_CA.pem
+2026-11-11T04:41:29.3391888Z Adding debian:Certum_Trusted_Network_CA.pem
+2026-11-11T04:41:29.3414572Z Adding debian:Certum_Trusted_Network_CA_2.pem
+2026-11-11T04:41:29.3435319Z Adding debian:Certum_Trusted_Root_CA.pem
+2026-11-11T04:41:29.3450752Z Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+2026-11-11T04:41:29.3472346Z Adding debian:D-TRUST_BR_Root_CA_2_2023.pem
+2026-11-11T04:41:29.3486391Z Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+2026-11-11T04:41:29.3509481Z Adding debian:D-TRUST_EV_Root_CA_2_2023.pem
+2026-11-11T04:41:29.3526689Z Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+2026-11-11T04:41:29.3544146Z Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+2026-11-11T04:41:29.3558738Z Adding debian:DigiCert_Assured_ID_Root_G2.pem
+2026-11-11T04:41:29.3570277Z Adding debian:DigiCert_Assured_ID_Root_G3.pem
+2026-11-11T04:41:29.3584755Z Adding debian:DigiCert_Global_Root_G2.pem
+2026-11-11T04:41:29.3595286Z Adding debian:DigiCert_Global_Root_G3.pem
+2026-11-11T04:41:29.3605211Z Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+2026-11-11T04:41:29.3626216Z Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+2026-11-11T04:41:29.3651819Z Adding debian:DigiCert_Trusted_Root_G4.pem
+2026-11-11T04:41:29.3672937Z Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+2026-11-11T04:41:29.3691586Z Adding debian:GTS_Root_R1.pem
+2026-11-11T04:41:29.3702041Z Adding debian:GTS_Root_R3.pem
+2026-11-11T04:41:29.3711714Z Adding debian:GTS_Root_R4.pem
+2026-11-11T04:41:29.3720487Z Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+2026-11-11T04:41:29.3729867Z Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+2026-11-11T04:41:29.3742967Z Adding debian:GlobalSign_Root_CA_-_R3.pem
+2026-11-11T04:41:29.3761526Z Adding debian:GlobalSign_Root_CA_-_R6.pem
+2026-11-11T04:41:29.3772706Z Adding debian:GlobalSign_Root_E46.pem
+2026-11-11T04:41:29.3793181Z Adding debian:GlobalSign_Root_R46.pem
+2026-11-11T04:41:29.3806906Z Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+2026-11-11T04:41:29.3817500Z Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+2026-11-11T04:41:29.3837221Z Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+2026-11-11T04:41:29.3848962Z Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+2026-11-11T04:41:29.3869177Z Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+2026-11-11T04:41:29.3887439Z Adding debian:HiPKI_Root_CA_-_G1.pem
+2026-11-11T04:41:29.3908846Z Adding debian:Hongkong_Post_Root_CA_3.pem
+2026-11-11T04:41:29.3926875Z Adding debian:ISRG_Root_X1.pem
+2026-11-11T04:41:29.3935956Z Adding debian:ISRG_Root_X2.pem
+2026-11-11T04:41:29.3954430Z Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+2026-11-11T04:41:29.3973228Z Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+2026-11-11T04:41:29.3993030Z Adding debian:Izenpe.com.pem
+2026-11-11T04:41:29.4008830Z Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+2026-11-11T04:41:29.4022885Z Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+2026-11-11T04:41:29.4047879Z Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+2026-11-11T04:41:29.4069058Z Adding debian:NAVER_Global_Root_Certification_Authority.pem
+2026-11-11T04:41:29.4106078Z Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+2026-11-11T04:41:29.4119572Z Adding debian:OISTE_Server_Root_ECC_G1.pem
+2026-11-11T04:41:29.4145426Z Adding debian:OISTE_Server_Root_RSA_G1.pem
+2026-11-11T04:41:29.4163817Z Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+2026-11-11T04:41:29.4176775Z Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+2026-11-11T04:41:29.4200967Z Adding debian:QuoVadis_Root_CA_1_G3.pem
+2026-11-11T04:41:29.4224621Z Adding debian:QuoVadis_Root_CA_2_G3.pem
+2026-11-11T04:41:29.4248062Z Adding debian:QuoVadis_Root_CA_3_G3.pem
+2026-11-11T04:41:29.4260915Z Adding debian:SECOM_TLS_ECC_Root_CA_2024.pem
+2026-11-11T04:41:29.4285962Z Adding debian:SECOM_TLS_RSA_Root_CA_2024.pem
+2026-11-11T04:41:29.4299788Z Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+2026-11-11T04:41:29.4325442Z Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+2026-11-11T04:41:29.4338899Z Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+2026-11-11T04:41:29.4364863Z Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+2026-11-11T04:41:29.4376903Z Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+2026-11-11T04:41:29.4401074Z Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+2026-11-11T04:41:29.4417860Z Adding debian:SZAFIR_ROOT_CA2.pem
+2026-11-11T04:41:29.4429540Z Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+2026-11-11T04:41:29.4454112Z Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+2026-11-11T04:41:29.4478021Z Adding debian:SecureSign_Root_CA14.pem
+2026-11-11T04:41:29.4489884Z Adding debian:SecureSign_Root_CA15.pem
+2026-11-11T04:41:29.4501945Z Adding debian:Security_Communication_ECC_RootCA1.pem
+2026-11-11T04:41:29.4518218Z Adding debian:Security_Communication_RootCA2.pem
+2026-11-11T04:41:29.4536404Z Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+2026-11-11T04:41:29.4554376Z Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+2026-11-11T04:41:29.4578608Z Adding debian:SwissSign_RSA_TLS_Root_CA_2022_-_1.pem
+2026-11-11T04:41:29.4606431Z Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+2026-11-11T04:41:29.4636524Z Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+2026-11-11T04:41:29.4655667Z Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+2026-11-11T04:41:29.4656387Z Adding debian:TWCA_CYBER_Root_CA.pem
+2026-11-11T04:41:29.4660170Z Adding debian:TWCA_Global_Root_CA.pem
+2026-11-11T04:41:29.4673351Z Adding debian:TWCA_Root_Certification_Authority.pem
+2026-11-11T04:41:29.4682806Z Adding debian:Telekom_Security_TLS_ECC_Root_2020.pem
+2026-11-11T04:41:29.4701761Z Adding debian:Telekom_Security_TLS_RSA_Root_2023.pem
+2026-11-11T04:41:29.4710983Z Adding debian:Telia_EC_TLS_Root_CA_v3.pem
+2026-11-11T04:41:29.4729096Z Adding debian:Telia_RSA_TLS_Root_CA_v3.pem
+2026-11-11T04:41:29.4747319Z Adding debian:Telia_Root_CA_v2.pem
+2026-11-11T04:41:29.4775059Z Adding debian:TrustAsia_Global_Root_CA_G3.pem
+2026-11-11T04:41:29.4775677Z Adding debian:TrustAsia_Global_Root_CA_G4.pem
+2026-11-11T04:41:29.4806535Z Adding debian:TrustAsia_TLS_ECC_Root_CA.pem
+2026-11-11T04:41:29.4807161Z Adding debian:TrustAsia_TLS_RSA_Root_CA.pem
+2026-11-11T04:41:29.4832314Z Adding debian:TunTrust_Root_CA.pem
+2026-11-11T04:41:29.4838043Z Adding debian:UCA_Extended_Validation_Root.pem
+2026-11-11T04:41:29.4854880Z Adding debian:UCA_Global_G2_Root.pem
+2026-11-11T04:41:29.4875098Z Adding debian:USERTrust_ECC_Certification_Authority.pem
+2026-11-11T04:41:29.4887022Z Adding debian:USERTrust_RSA_Certification_Authority.pem
+2026-11-11T04:41:29.4916563Z Adding debian:certSIGN_Root_CA_G2.pem
+2026-11-11T04:41:29.4917574Z Adding debian:e-Szigno_Root_CA_2017.pem
+2026-11-11T04:41:29.4924031Z Adding debian:e-Szigno_TLS_Root_CA_2023.pem
+2026-11-11T04:41:29.4933094Z Adding debian:emSign_ECC_Root_CA_-_C3.pem
+2026-11-11T04:41:29.4946331Z Adding debian:emSign_Root_CA_-_C1.pem
+2026-11-11T04:41:29.4958920Z Adding debian:emSign_Root_CA_-_G1.pem
+2026-11-11T04:41:29.4967658Z Adding debian:vTrus_ECC_Root_CA.pem
+2026-11-11T04:41:29.4984755Z Adding debian:vTrus_Root_CA.pem
+2026-11-11T04:41:29.5401298Z done.
+2026-11-11T04:41:29.5432998Z Setting up libatk-wrapper-java-jni:amd64 (0.44.0-1) ...
+2026-11-11T04:41:29.5453147Z Setting up openjdk-17-jre-headless:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:29.5943484Z Setting up cmake (4.2.3-2ubuntu2) ...
+2026-11-11T04:41:29.6058761Z Processing triggers for libc-bin (2.43-2ubuntu2.4) ...
+2026-11-11T04:41:29.6344183Z Processing triggers for man-db (2.13.1-1build1) ...
+2026-11-11T04:41:29.6366568Z Not building database; man-db/auto-update is not 'true'.
+2026-11-11T04:41:29.6392510Z Processing triggers for sgml-base (1.31+nmu1build1) ...
+2026-11-11T04:41:29.7062640Z Setting up x11proto-dev (2025.1-1) ...
+2026-11-11T04:41:29.7087029Z Setting up libxau-dev:amd64 (1:1.0.11-1build2) ...
+2026-11-11T04:41:29.7108341Z Processing triggers for hicolor-icon-theme (0.18-2build1) ...
+2026-11-11T04:41:30.5049898Z Setting up libice-dev:amd64 (2:1.1.1-1build1) ...
+2026-11-11T04:41:30.5073214Z Setting up libsm-dev:amd64 (2:1.2.6-1build1) ...
+2026-11-11T04:41:30.5118665Z Setting up libxdmcp-dev:amd64 (1:1.1.5-2) ...
+2026-11-11T04:41:30.5145722Z Setting up libxcb1-dev:amd64 (1.17.0-2ubuntu1) ...
+2026-11-11T04:41:30.5176219Z Setting up libx11-dev:amd64 (2:1.8.13-1ubuntu0.1) ...
+2026-11-11T04:41:30.5214654Z Setting up libxt-dev:amd64 (1:1.2.1-1.3build1) ...
+2026-11-11T04:41:30.5283594Z Processing triggers for ca-certificates-java (20260311ubuntu0.26.04.2) ...
+2026-11-11T04:41:30.5613023Z done.
+2026-11-11T04:41:30.5657050Z Setting up openjdk-17-jre:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:30.5716722Z Setting up openjdk-17-jdk-headless:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:30.6687793Z Setting up openjdk-17-jdk:amd64 (17.0.21.0.3+1-1~26.04.1) ...
+2026-11-11T04:41:31.2838277Z 
+2026-11-11T04:41:31.2838680Z Running kernel seems to be up-to-date.
+2026-11-11T04:41:31.2839005Z 
+2026-11-11T04:41:31.2839140Z Restarting services...
+2026-11-11T04:41:31.2929356Z 
+2026-11-11T04:41:31.2929779Z Service restarts being deferred:
+2026-11-11T04:41:31.2932793Z  systemctl restart hosted-compute-agent.service
+2026-11-11T04:41:31.2933317Z 
+2026-11-11T04:41:31.2933902Z No containers need to be restarted.
+2026-11-11T04:41:31.2934226Z 
+2026-11-11T04:41:31.2934576Z No user sessions are running outdated binaries.
+2026-11-11T04:41:31.2935039Z 
+2026-11-11T04:41:31.2935555Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-11T04:41:32.0764266Z ##[group]Run mkdir -p ~/.buildozer/android/platform/android-sdk/licenses
+2026-11-11T04:41:32.0764833Z [36;1mmkdir -p ~/.buildozer/android/platform/android-sdk/licenses[0m
+2026-11-11T04:41:32.0765505Z [36;1mecho "24333f8a63b6825ea9c5514f83c2829b004d1fee" > ~/.buildozer/android/platform/android-sdk/licenses/android-sdk-license[0m
+2026-11-11T04:41:32.0767062Z [36;1mecho "84831b9409646a918e30573bab4c9c91346d8abd" > ~/.buildozer/android/platform/android-sdk/licenses/android-sdk-preview-license[0m
+2026-11-11T04:41:32.0819055Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:32.0819303Z env:
+2026-11-11T04:41:32.0819569Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0820032Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:32.0820470Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0820847Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0821260Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0821651Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:32.0821988Z ##[endgroup]
+2026-11-11T04:41:32.0944869Z ##[group]Run pip install buildozer cython
+2026-11-11T04:41:32.0945195Z [36;1mpip install buildozer cython[0m
+2026-11-11T04:41:32.0990346Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:32.0990585Z env:
+2026-11-11T04:41:32.0990852Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0991303Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:32.0991744Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0992131Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0992507Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:32.0992889Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:32.0993208Z ##[endgroup]
+2026-11-11T04:41:32.5615189Z Collecting buildozer
+2026-11-11T04:41:32.6276227Z   Downloading buildozer-1.6.0-py3-none-any.whl.metadata (159 kB)
+2026-11-11T04:41:32.9786408Z Collecting cython
+2026-11-11T04:41:32.9948674Z   Downloading cython-3.3.1-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2026-11-11T04:41:33.0210676Z Collecting pexpect (from buildozer)
+2026-11-11T04:41:33.0366241Z   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-11-11T04:41:33.0663213Z Collecting packaging (from buildozer)
+2026-11-11T04:41:33.0820219Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+2026-11-11T04:41:33.0898153Z Collecting cython
+2026-11-11T04:41:33.1062367Z   Downloading Cython-0.29.37-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl.metadata (3.1 kB)
+2026-11-11T04:41:33.1308880Z Collecting ptyprocess>=0.5 (from pexpect->buildozer)
+2026-11-11T04:41:33.1469802Z   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2026-11-11T04:41:33.1739378Z Downloading buildozer-1.6.0-py3-none-any.whl (92 kB)
+2026-11-11T04:41:33.1971663Z Downloading Cython-0.29.37-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.manylinux_2_24_x86_64.whl (1.9 MB)
+2026-11-11T04:41:33.2466582Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 52.5 MB/s  0:00:00
+2026-11-11T04:41:33.2622992Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+2026-11-11T04:41:33.2801005Z Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+2026-11-11T04:41:33.2997624Z Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+2026-11-11T04:41:33.3595643Z Installing collected packages: ptyprocess, pexpect, packaging, cython, buildozer
+2026-11-11T04:41:33.9993324Z 
+2026-11-11T04:41:34.0008300Z Successfully installed buildozer-1.6.0 cython-0.29.37 packaging-26.3 pexpect-4.9.0 ptyprocess-0.7.0
+2026-11-11T04:41:34.0514364Z ##[group]Run buildozer -v android debug
+2026-11-11T04:41:34.0514725Z [36;1mbuildozer -v android debug[0m
+2026-11-11T04:41:34.0563835Z shell: /usr/bin/bash -e {0}
+2026-11-11T04:41:34.0564081Z env:
+2026-11-11T04:41:34.0564353Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0564803Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib/pkgconfig
+2026-11-11T04:41:34.0565249Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566091Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566506Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.22/x64
+2026-11-11T04:41:34.0566892Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.22/x64/lib
+2026-11-11T04:41:34.0567216Z ##[endgroup]
+2026-11-11T04:41:34.1537528Z Cloning into 'python-for-android'...
+2026-11-11T04:42:18.4820412Z [0m[1;34m# Ensure build layout[0m
+2026-11-11T04:42:18.4821368Z [0m[1;30m# Create directory /home/runner/.buildozer/cache[0m
+2026-11-11T04:42:18.4822662Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer[0m
+2026-11-11T04:42:18.4823881Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/bin[0m
+2026-11-11T04:42:18.4825133Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/applibs[0m
+2026-11-11T04:42:18.4826667Z [0m[1;30m# Create directory /home/runner/.buildozer/android/platform/android/platform[0m
+2026-11-11T04:42:18.4828054Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4829436Z [0m[1;30m# Create directory /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/app[0m
+2026-11-11T04:42:18.4830466Z [0m[1;34m# Check configuration tokens[0m
+2026-11-11T04:42:18.4832772Z [0m[1;34m# Preparing build[0m
+2026-11-11T04:42:18.4833372Z [0m[1;34m# Check requirements for android[0m
+2026-11-11T04:42:18.4833924Z [0m[1;30m# Search for Git (git)[0m
+2026-11-11T04:42:18.4834275Z [0m[1;30m#  -> found at /usr/bin/git[0m
+2026-11-11T04:42:18.4834874Z [0m[1;30m# Search for Cython (cython)[0m
+2026-11-11T04:42:18.4835560Z [0m[1;30m#  -> found at /opt/hostedtoolcache/Python/3.10.22/x64/bin/cython[0m
+2026-11-11T04:42:18.4836337Z [0m[1;30m# Search for Java compiler (javac)[0m
+2026-11-11T04:42:18.4836779Z [0m[1;30m#  -> found at /usr/lib/jvm/temurin-25-jdk-amd64/bin/javac[0m
+2026-11-11T04:42:18.4837196Z [0m[1;30m# Search for Java keytool (keytool)[0m
+2026-11-11T04:42:18.4837632Z [0m[1;30m#  -> found at /usr/lib/jvm/temurin-25-jdk-amd64/bin/keytool[0m
+2026-11-11T04:42:18.4838030Z [0m[1;34m# Install platform[0m
+2026-11-11T04:42:18.4838690Z [0m[1;30m# Run 'git clone -b master --single-branch https://github.com/kivy/python-for-android.git python-for-android' ...[0m
+2026-11-11T04:42:18.4839474Z [0m[1;30m# Cwd /home/runner/work/etisalat-bot/etisalat-bot/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4840645Z [0m[1;30m# Run '/opt/hostedtoolcache/Python/3.10.22/x64/bin/python -m pip install -q --user appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel~=0.43.0' ...[0m
+2026-11-11T04:42:18.4841545Z [0m[1;30m# Cwd None[0m
+2026-11-11T04:42:18.4841853Z [0m[1;34m# Android ANT is missing, downloading[0m
+2026-11-11T04:42:18.4842427Z [0m[1;30m# Downloading https://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz[0m
+2026-11-11T04:42:18.4843212Z [0m[1;30m# Extracting apache-ant-1.9.4-bin.tar.gz to /home/runner/.buildozer/android/platform/apache-ant-1.9.4[0m
+2026-11-11T04:42:18.4843779Z [0m[1;34m# Apache ANT installation done.[0m
+2026-11-11T04:42:18.4844257Z [0m[1;34m# Android SDK found at /home/runner/.buildozer/android/platform/android-sdk[0m
+2026-11-11T04:42:18.4844885Z [0m[1;34m# Recommended android's NDK version by p4a is: 28c[0m
+2026-11-11T04:42:18.4845291Z [0m[1;34m# Android NDK is missing, downloading[0m
+2026-11-11T04:42:18.4846339Z [0m[1;30m# Downloading https://dl.google.com/android/repository/android-ndk-r28c-linux.zip[0m
+2026-11-11T04:42:18.4846906Z [0m[1;34m# Unpacking Android NDK[0m
+2026-11-11T04:42:18.4847422Z [0m[1;30m# Extracting android-ndk-r28c-linux.zip to /home/runner/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4848134Z [0m[1;30m# Run 'unzip -q /home/runner/.buildozer/android/platform/android-ndk-r28c-linux.zip' ...[0m
+2026-11-11T04:42:18.4848687Z [0m[1;30m# Cwd /home/runner/.buildozer/android/platform[0m
+2026-11-11T04:42:18.4849571Z [0m[1;30m# Rename /home/runner/.buildozer/android/platform/android-ndk-r28c to /home/runner/.buildozer/android/platform/android-ndk-r28c[0m
+2026-11-11T04:42:18.4850229Z [0m[1;34m# Android NDK installation done.[0m
+2026-11-11T04:42:18.4850652Z [0m[1;34m# Installing/updating SDK platform tools if necessary[0m
+2026-11-11T04:42:18.4851467Z [0m[1;31m# sdkmanager path "/home/runner/.buildozer/android/platform/android-sdk/tools/bin/sdkmanager" does not exist, sdkmanager is not installed[0m
+2026-11-11T04:42:18.4970829Z ##[error]Process completed with exit code 1.
+2026-11-11T04:42:18.5113693Z Post job cleanup.
+2026-11-11T04:42:18.5988733Z [command]/usr/bin/git version
+2026-11-11T04:42:18.6029742Z git version 2.56.0
+2026-11-11T04:42:18.6069892Z Temporarily overriding HOME='/home/runner/work/_temp/051ad547-5d4a-4462-8e66-e44487fc0796' before making global git config changes
+2026-11-11T04:42:18.6071215Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-11T04:42:18.6074862Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/etisalat-bot/etisalat-bot
+2026-11-11T04:42:18.6124893Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-11T04:42:18.6163192Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-11T04:42:18.6473612Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-11T04:42:18.6507402Z http.https://github.com/.extraheader
+2026-11-11T04:42:18.6519995Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-11T04:42:18.6560688Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-11T04:42:18.6870322Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-11T04:42:18.6909053Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-11T04:42:18.7355603Z Cleaning up orphan processes
+2026-11-11T04:42:18.7892410Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
