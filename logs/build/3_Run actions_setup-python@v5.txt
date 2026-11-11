@@ -1,36 +1,36 @@
-﻿2026-11-11T04:41:08.7601948Z ##[group]Run actions/setup-python@v5
-2026-11-11T04:41:08.7603305Z with:
-2026-11-11T04:41:08.7604230Z   python-version: 3.10
-2026-11-11T04:41:08.7605356Z   check-latest: false
-2026-11-11T04:41:08.7616846Z   token: ***
-2026-11-11T04:41:08.7617877Z   update-environment: true
-2026-11-11T04:41:08.7619029Z   allow-prereleases: false
-2026-11-11T04:41:08.7620138Z   freethreaded: false
-2026-11-11T04:41:08.7621147Z ##[endgroup]
-2026-11-11T04:41:08.9175322Z ##[group]Installed versions
-2026-11-11T04:41:08.9680946Z Version 3.10 was not found in the local cache
-2026-11-11T04:41:09.0142335Z (node:2375) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-2026-11-11T04:41:09.0145530Z (Use `node --trace-deprecation ...` to show where the warning was created)
-2026-11-11T04:41:09.9124010Z Version 3.10 is available for downloading
-2026-11-11T04:41:09.9124753Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-26.04-x64.tar.gz"
-2026-11-11T04:41:10.4303163Z Extract downloaded archive
-2026-11-11T04:41:10.4442868Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b7d701c6-b587-425b-9467-b16723ccd7bb -f /home/runner/work/_temp/faac526d-b968-4e21-ae64-bd687871ad7f
-2026-11-11T04:41:11.3562806Z Execute installation script
-2026-11-11T04:41:11.3700757Z Check if Python hostedtoolcache folder exist...
-2026-11-11T04:41:11.3701730Z Create Python 3.10.22 folder
-2026-11-11T04:41:11.3728594Z Copy Python binaries to hostedtoolcache folder
-2026-11-11T04:41:11.8243259Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
-2026-11-11T04:41:11.8347215Z Upgrading pip...
-2026-11-11T04:41:13.5556515Z Collecting pip
-2026-11-11T04:41:13.6174148Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
-2026-11-11T04:41:13.6978341Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 25.5 MB/s eta 0:00:00
-2026-11-11T04:41:13.6979070Z 
-2026-11-11T04:41:13.7573855Z Installing collected packages: pip
-2026-11-11T04:41:13.7575496Z Attempting uninstall: pip
-2026-11-11T04:41:13.7581930Z Found existing installation: pip 23.0.1
-2026-11-11T04:41:13.9284220Z Uninstalling pip-23.0.1:
-2026-11-11T04:41:13.9387449Z Successfully uninstalled pip-23.0.1
-2026-11-11T04:41:14.8244202Z Successfully installed pip-26.3
-2026-11-11T04:41:14.8729226Z Create complete file
-2026-11-11T04:41:14.8794874Z Successfully set up CPython (3.10.22)
-2026-11-11T04:41:14.8796317Z ##[endgroup]
+﻿2026-11-11T04:47:46.4119267Z ##[group]Run actions/setup-python@v5
+2026-11-11T04:47:46.4119800Z with:
+2026-11-11T04:47:46.4120132Z   python-version: 3.10
+2026-11-11T04:47:46.4120511Z   check-latest: false
+2026-11-11T04:47:46.4123684Z   token: ***
+2026-11-11T04:47:46.4124044Z   update-environment: true
+2026-11-11T04:47:46.4124450Z   allow-prereleases: false
+2026-11-11T04:47:46.4124834Z   freethreaded: false
+2026-11-11T04:47:46.4125193Z ##[endgroup]
+2026-11-11T04:47:46.5308866Z ##[group]Installed versions
+2026-11-11T04:47:46.5396958Z Version 3.10 was not found in the local cache
+2026-11-11T04:47:46.5697073Z (node:2190) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-11T04:47:46.5698919Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-11T04:47:47.1472066Z Version 3.10 is available for downloading
+2026-11-11T04:47:47.1473112Z Download from "https://github.com/actions/python-versions/releases/download/3.10.22-36876129702/python-3.10.22-linux-26.04-x64.tar.gz"
+2026-11-11T04:47:47.6727069Z Extract downloaded archive
+2026-11-11T04:47:47.6867752Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/dc547648-7caf-4aee-b9bb-0cfe5e2ebb98 -f /home/runner/work/_temp/da46676f-289c-4c08-a834-6628450abbb3
+2026-11-11T04:47:48.4182044Z Execute installation script
+2026-11-11T04:47:48.4320462Z Check if Python hostedtoolcache folder exist...
+2026-11-11T04:47:48.4321299Z Create Python 3.10.22 folder
+2026-11-11T04:47:48.4347200Z Copy Python binaries to hostedtoolcache folder
+2026-11-11T04:47:48.7969899Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-11-11T04:47:48.8065440Z Upgrading pip...
+2026-11-11T04:47:50.3680633Z Collecting pip
+2026-11-11T04:47:50.4047229Z Downloading pip-26.3-py3-none-any.whl (2.0 MB)
+2026-11-11T04:47:50.5149106Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 18.1 MB/s eta 0:00:00
+2026-11-11T04:47:50.5173689Z 
+2026-11-11T04:47:50.6031901Z Installing collected packages: pip
+2026-11-11T04:47:50.6032933Z Attempting uninstall: pip
+2026-11-11T04:47:50.6036299Z Found existing installation: pip 23.0.1
+2026-11-11T04:47:50.7369222Z Uninstalling pip-23.0.1:
+2026-11-11T04:47:50.7428590Z Successfully uninstalled pip-23.0.1
+2026-11-11T04:47:51.4818107Z Successfully installed pip-26.3
+2026-11-11T04:47:51.5368848Z Create complete file
+2026-11-11T04:47:51.5437022Z Successfully set up CPython (3.10.22)
+2026-11-11T04:47:51.5438073Z ##[endgroup]
