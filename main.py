@@ -12,8 +12,16 @@ from kivy.core.text import LabelBase
 from threading import Thread, Event
 import time, requests, base64, json, re, hashlib, urllib.parse, xml.etree.ElementTree as ET
 import urllib3
+import arabic_reshaper
+from bidi.algorithm import get_display
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# دالة إصلاح النص العربي
+def ar(text):
+    if not text:
+        return text
+    return get_display(arabic_reshaper.reshape(str(text)))
 
 # تسجيل الخط العربي
 LabelBase.register(name='Arabic', fn_regular='Amiri-Regular.ttf')
@@ -149,20 +157,18 @@ class RunnerApp(App):
         header.add_widget(Label(text="WhatsApp: 01015946905 | FB: /mostafa7ot", font_size='12sp', color=get_color_from_hex('#AAAAAA')))
         self.layout.add_widget(header)
         
-        # إضافة font_name='Arabic' لكل الحقول والأزرار لدعم النصوص العربية
-        self.email_primary = TextInput(hint_text='إيميل الأونر', font_name='Arabic', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
-        self.password_primary = TextInput(hint_text='باسورد الأونر', font_name='Arabic', password=True, multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
-        self.email_secondary = TextInput(hint_text='إيميل الفرد', font_name='Arabic', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
-        self.password_secondary = TextInput(hint_text='باسورد الفرد', font_name='Arabic', password=True, multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
-        self.target = TextInput(hint_text='الهدف (ميكسات)', font_name='Arabic', input_filter='int', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
+        self.email_primary = TextInput(hint_text=ar('إيميل الأونر'), font_name='Arabic', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
+        self.password_primary = TextInput(hint_text=ar('باسورد الأونر'), font_name='Arabic', password=True, multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
+        self.email_secondary = TextInput(hint_text=ar('إيميل الفرد'), font_name='Arabic', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
+        self.password_secondary = TextInput(hint_text=ar('باسورد الفرد'), font_name='Arabic', password=True, multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
+        self.target = TextInput(hint_text=ar('الهدف (ميكسات)'), font_name='Arabic', input_filter='int', multiline=False, size_hint_y=None, height=45, background_color=get_color_from_hex('#333333'), foreground_color=get_color_from_hex('#FFFFFF'))
         
         for widget in [self.email_primary, self.password_primary, self.email_secondary, self.password_secondary, self.target]:
             self.layout.add_widget(widget)
 
         btn_layout = BoxLayout(orientation='horizontal', spacing=10, size_hint_y=None, height=50)
-        self.start_btn = Button(text='بدء التشغيل', font_name='Arabic', background_color=get_color_from_hex('#00CC66'), bold=True)
-        self.stop_btn = Button(text='إيقاف', font_name='Arabic', background_color=get_color_from_hex('#CC0000'), bold=True)
-        # تصحيح أسماء دوال الأزرار
+        self.start_btn = Button(text=ar('بدء التشغيل'), font_name='Arabic', background_color=get_color_from_hex('#00CC66'), bold=True)
+        self.stop_btn = Button(text=ar('إيقاف'), font_name='Arabic', background_color=get_color_from_hex('#CC0000'), bold=True)
         self.start_btn.bind(on_press=self.start_bot)
         self.stop_btn.bind(on_press=self.stop_bot)
         btn_layout.add_widget(self.start_btn)
@@ -188,7 +194,6 @@ class RunnerApp(App):
         self.log_label.text_size = (instance.width - 10, None)
         self.log_label.height = max(instance.height, self.log_label.texture_size[1])
 
-    # تغيير اسم دالة البدء لتجنب التعارض مع on_start الخاصة بـ Kivy
     def start_bot(self, instance):
         if self.worker_thread and self.worker_thread.is_alive(): return
         self.stop_event.clear()
@@ -196,12 +201,12 @@ class RunnerApp(App):
         self.log_label.text = ''
         self.worker_thread = Thread(target=self._worker_loop, daemon=True)
         self.worker_thread.start()
-        self._log('▶ بدء التشغيل...')
+        self._log(ar('▶ بدء التشغيل...'))
 
     def stop_bot(self, instance):
         if self.worker_thread and self.worker_thread.is_alive():
             self.stop_event.set()
-            self._log('⏹ تم إرسال إشارة الإيقاف...')
+            self._log(ar('⏹ تم إرسال إشارة الإيقاف...'))
 
     def _worker_loop(self):
         try:
@@ -210,47 +215,47 @@ class RunnerApp(App):
             email2 = self.email_secondary.text.strip()
             pass2 = self.password_secondary.text.strip()
             target_val = int(self.target.text) if self.target.text.isdigit() else 50000
-            self._log(f'🔐 جاري تسجيل الدخول...')
+            self._log(ar('🔐 جاري تسجيل الدخول...'))
             owner = EtisalatAPI()
             if not owner.login(email1, pass1):
-                self._log('❌ فشل تسجيل دخول الأونر.')
+                self._log(ar('❌ فشل تسجيل دخول الأونر.'))
                 return
-            self._log(f'✅ الأونر: {owner.current_dial}')
+            self._log(ar(f'✅ الأونر: {owner.current_dial}'))
             child = EtisalatAPI()
             if not child.login(email2, pass2):
-                self._log('❌ فشل تسجيل دخول الفرد.')
+                self._log(ar('❌ فشل تسجيل دخول الفرد.'))
                 return
-            self._log(f'✅ الفرد: {child.current_dial}')
+            self._log(ar(f'✅ الفرد: {child.current_dial}'))
             cycle = 0
             while not self.stop_event.is_set():
                 cycle += 1
                 plan_id, mix_amount, child_num = owner.get_status_and_child()
                 if mix_amount is None: mix_amount = 0
                 self._update_progress(min(100, int((mix_amount / target_val) * 100)))
-                self._log(f'🔄 الدورة {cycle} | ميكس الأونر: {mix_amount:,} / {target_val:,}')
+                self._log(ar(f'🔄 الدورة {cycle} | ميكس الأونر: {mix_amount:,} / {target_val:,}'))
                 if mix_amount >= target_val:
-                    self._log(f'🎉 مبروك! تم الوصول للهدف: {mix_amount:,}')
+                    self._log(ar(f'🎉 مبروك! تم الوصول للهدف: {mix_amount:,}'))
                     return
                 if mix_amount > 0:
-                    self._log(f'💸 تحويل {mix_amount:,} للفرد...')
+                    self._log(ar(f'💸 تحويل {mix_amount:,} للفرد...'))
                     owner.transfer_mix(child.current_dial, mix_amount, plan_id)
                     time.sleep(3)
                 if "Parent_7" in str(plan_id):
-                    self._log("🔄 تغيير الباقة إلى 180...")
+                    self._log(ar("🔄 تغيير الباقة إلى 180..."))
                     owner.change_plan("Hekaya_XRP_MIX_Parent_6", "951")
                 else:
-                    self._log("🔄 تغيير الباقة إلى 270...")
+                    self._log(ar("🔄 تغيير الباقة إلى 270..."))
                     owner.change_plan("Hekaya_XRP_MIX_Parent_7", "")
                 for _ in range(60):
                     if self.stop_event.is_set(): return
                     time.sleep(1)
                 _, child_mix, _ = child.get_status_and_child()
                 if child_mix and child_mix > 0:
-                    self._log(f'💸 تحويل {child_mix:,} من الفرد للأونر...')
+                    self._log(ar(f'💸 تحويل {child_mix:,} من الفرد للأونر...'))
                     child.transfer_mix(owner.current_dial, child_mix, "Hekaya_XRP_MIX_Child_1")
                 time.sleep(5)
         except Exception as e:
-            self._log(f'❌ خطأ: {str(e)}')
+            self._log(ar(f'❌ خطأ: {str(e)}'))
 
     @mainthread
     def _update_progress(self, value):
