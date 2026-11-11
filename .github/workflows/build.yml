@@ -11,7 +11,7 @@ jobs:
       - name: Install system deps
         run: |
           sudo apt-get update
-          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev libltdl-dev
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev libltdl-dev automake autopoint gettext libtool
       - name: Setup Android SDK and Accept Licenses
         run: |
           mkdir -p $HOME/android-sdk/cmdline-tools
