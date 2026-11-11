@@ -162,7 +162,7 @@ class RunnerApp(App):
         btn_layout.add_widget(self.stop_btn)
         self.layout.add_widget(btn_layout)
 
-        self.progress = ProgressBar(min=0, max=100, value=0, size_hint_y=None, height=20)
+        self.progress = ProgressBar(max=100, value=0, size_hint_y=None, height=20)
         self.layout.add_widget(self.progress)
 
         self.scroll_view = ScrollView()
