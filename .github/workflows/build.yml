@@ -5,59 +5,40 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-
-      - name: Setup Java 17 (Required for Android Gradle Plugin)
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Cache Buildozer directory
-        uses: actions/cache@v4
-        with:
-          path: |
-            .buildozer
-            ~/.buildozer
-          key: buildozer-${{ runner.os }}-v2-${{ hashFiles('buildozer.spec') }}
-          restore-keys: |
-            buildozer-${{ runner.os }}-v2-
-
+          python-version: '3.10'
       - name: Install system deps
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends \
-            build-essential git zip unzip \
-            autoconf automake libtool libtool-bin libltdl-dev pkg-config \
-            zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 \
-            cmake libffi-dev libssl-dev wget patch
+            build-essential git zip unzip openjdk-17-jdk \
+            autoconf automake libtool libtool-bin pkg-config \
+            zlib1g-dev libncurses-dev libncursesw5-dev libtinfo6 \
+            cmake libffi-dev libssl-dev wget \
+            liblzma-dev libbz2-dev libreadline-dev libsqlite3-dev libgdbm-dev tk-dev
           echo "ACLOCAL_PATH=/usr/share/aclocal" >> $GITHUB_ENV
-
-      - name: Install Buildozer + Cython + Fix Pip Spinner Error
+      - name: Setup Android SDK cmdline-tools
         run: |
-          echo "pip<24.1" > $HOME/pip-constraints.txt
-          echo "setuptools<70.0.0" >> $HOME/pip-constraints.txt
-          echo "wheel<0.44.0" >> $HOME/pip-constraints.txt
-          echo "cython==0.29.36" >> $HOME/pip-constraints.txt
-          
-          pip install "pip<24.1" "setuptools<70.0.0" "wheel<0.44.0" "virtualenv<20.26.0"
-          pip install "cython==0.29.36" "buildozer==1.5.0"
-          
-          echo "PIP_CONSTRAINT=$HOME/pip-constraints.txt" >> $GITHUB_ENV
-          echo "VIRTUALENV_PIP=24.0" >> $GITHUB_ENV
-          echo "VIRTUALENV_SETUPTOOLS=69.5.1" >> $GITHUB_ENV
-          echo "VIRTUALENV_WHEEL=0.43.0" >> $GITHUB_ENV
-          echo "VIRTUALENV_NO_PERIODIC_UPDATE=1" >> $GITHUB_ENV
-
+          mkdir -p $HOME/android-sdk/cmdline-tools
+          cd $HOME/android-sdk/cmdline-tools
+          wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip
+          unzip -q commandlinetools-linux-11076708_latest.zip
+          mv cmdline-tools latest
+          export PATH=$HOME/android-sdk/cmdline-tools/latest/bin:$PATH
+          yes | sdkmanager --licenses || true
+          sdkmanager "platform-tools" "platforms;android-31" "build-tools;31.0.0" || true
+          echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "PATH=$HOME/android-sdk/cmdline-tools/latest/bin:$HOME/android-sdk/platform-tools:$PATH" >> $GITHUB_ENV
+      - name: Install Buildozer + Cython + p4a
+        run: |
+          pip install --upgrade pip
+          pip install "cython==0.29.36" "buildozer==1.5.0" "python-for-android==2023.09.16"
       - name: Build APK
         env:
           ACLOCAL_PATH: /usr/share/aclocal
-        run: |
-          yes | buildozer -v android debug
-
+        run: buildozer -v android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
